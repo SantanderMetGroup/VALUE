@@ -25,7 +25,7 @@ show.indices <- function(index.code = NULL, function.name = NULL, filter = NULL)
     df <- read.lookup.table("indices")
     ind <- 1:nrow(df)
     if (!is.null(index.code)) {
-        ind <- grep(index.code, df$CODE, fixed = TRUE)
+        ind <- grep(paste0("^", index.code, "$"), df$CODE, ignore.case = TRUE)
         if (length(ind) == 0) stop("Index code '", index.code, "' not found. Check the complete list of index codes by typing 'show.indices()$CODE'", call. = FALSE)
     }
     if (!is.null(function.name)) {
@@ -64,7 +64,7 @@ show.diagnostics <- function(diagnostic.code = NULL, function.name = NULL, filte
     df <- read.lookup.table("diagnostics")
     ind <- 1:nrow(df)
     if (!is.null(diagnostic.code)) {
-        ind <- grep(diagnostic.code, df$CODE, fixed = TRUE)
+        ind <- grep(paste0("^", diagnostic.code, "$"), df$CODE, ignore.case = TRUE)
         if (length(ind) == 0) stop("Diagnostic code '", diagnostic.code, "' not found. Check the complete list of diagnostic codes by typing 'show.diagnostics()$CODE'", call. = FALSE)
     }
     if (!is.null(function.name)) {
