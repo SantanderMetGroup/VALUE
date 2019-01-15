@@ -6,6 +6,6 @@
 #' @author J. Bedia, D. San-Martin
 #' @export
 
-measure.nDays <- function(indexObs = NULL, indexPrd = NULL, obs, prd, dates) {
-      length(obs)
+diagnostic.nDays <- function(indexObs = NULL, indexPrd = NULL, obs, prd, dates) {
+    length(obs)
 }
