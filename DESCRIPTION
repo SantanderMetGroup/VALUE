@@ -1,26 +1,27 @@
-Package: R.VALUE
+Package: VALUE
 Depends:
-    R(>= 3.0.0)
+    R(>= 3.5.0)
 Imports:
     utils,
     abind,
     evd,
     RcppEigen,
     RCurl,
-    signal
+    signal,
+    magrittr
 Suggests:
     lattice
 Type: Package
 Title: Climate data validation in the framework of the COST action VALUE
-Version: 1.4.23
-Date: 2017-10-13
+Version: 0.0.1
+Date: 2019-01-15
 Authors@R: as.person(c(
     "Santander Meteorology Group [aut]",      
     "Predictia Intelligent Data Solutions [ctb]",
-    "Joaquin Bedia <bediaj@unican.es> [ctb, cre]",
+    "Joaquín Bedia <bediaj@unican.es> [ctb, cre]",
     "Thomas Bosshard <thomas.bosshard@smhi.se> [ctb]",
-    "Maria J. Casado <mcasadoc@aemet.es> [ctb]",
-    "Jose M. Gutierrez <gutierjm@unican.es> [ctb]",
+    "María J. Casado <mcasadoc@aemet.es> [ctb]",
+    "José M. Gutiérrez <gutierjm@unican.es> [ctb]",
     "Sixto Herrera <sixto@predictia.es> [ctb]",
     "Elke Hertig <elke.hertig@geo.uni-augsburg.de> [ctb]",
     "Sven Kotlarski <sven.kotlarski@env.ethz.ch> [ctb]",
@@ -28,13 +29,12 @@ Authors@R: as.person(c(
     "Neyko Neykov <neyko.neykov@meteo.bg> [ctb]",
     "Petra Ramos <pramosc@aemet.es> [ctb]",
     "Ole Roessler <ole.roessler@giub.unibe.ch> [ctb]",
-    "Daniel San Martin <dani@predictia.es> [ctb]",
+    "Daniel San-Martín <dani@predictia.es> [ctb]",
     "Max Tuni <max@predictia.es> [ctb]",
     "Martin Widmann <M.Widmann@bham.ac.uk> [ctb]"))
 BugReports: https://github.com/SantanderMetGroup/R_VALUE/issues
-Description: Load climate and weather data into R, compute several indices and
-    perform climate data validation using the tools developed in the COST
-    action VALUE.
+Description: Indices and diagnostics to perform climate data validation implemented in the COST action VALUE. See the reference paper <https://doi.org/10.1002/joc.5462>.
 License: GPL (>= 3)
+Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1

@@ -1,8 +1,10 @@
-R.VALUE
-=======
+# VALUE changelog
 
-* Bug fix in subsetValue
-* Minor documentation updates
+Package VALUE is the continuation of the former package [R.VALUE](https://github.com/SantanderMetGroup/R_VALUE). See its history in <https://github.com/SantanderMetGroup/R_VALUE/releases>
+
+## v0.0.1
+ * New functions `summary.indices` and `summary.diagnostics`, providing a list of available indices/diagnostics 
+
 
 
 

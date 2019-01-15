@@ -16,10 +16,10 @@
 #     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #' @title Remove stations above a given proportion of missing data
-#' @description Remove stations over a user-defined proportion of missing data from a R.VALUE multi-station object, 
+#' @description Remove stations over a user-defined proportion of missing data from a VALUE multi-station object, 
 #' @param valueObj A VALUE R object, but see Details.
 #' @param max.na.prop Maximum allowed proportion of missing data (Default to 0, i.e., no missing values are allowed)
-#' @return A R.VALUE object without the stations above the user-defined threshold of missing data
+#' @return A VALUE object without the stations above the user-defined threshold of missing data
 #' @details The function assumes that all dimensions are present (i.e., function dimFix has been applied)
 #' @export
 #' @author J Bedia

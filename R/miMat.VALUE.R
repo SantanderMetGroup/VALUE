@@ -54,7 +54,7 @@
 #' @export
 #' @references \url{https://en.wikipedia.org/wiki/Mutual_information}
 #' @examples \dontrun{
-#' obs.file <- file.path(find.package("R.VALUE"), "example_datasets", "VALUE_53_ECAD_Germany_v1.zip")
+#' obs.file <- file.path(find.package("VALUE"), "example_datasets", "VALUE_53_ECAD_Germany_v1.zip")
 #' stationObj <- loadValueStations(obs.file, var = "precip")
 #' # Mutual information (By default, computes the
 #' # joint probabilities for each pair of stations for Dry-Dry, Dry-Wet,

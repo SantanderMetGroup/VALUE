@@ -45,9 +45,9 @@
 #' @export
 #' @examples \dontrun{
 #' # Load observations
-#' obs.file <- file.path(find.package("R.VALUE"), "example_datasets", "VALUE_ECA_86_v2.zip")
+#' obs.file <- file.path(find.package("VALUE"), "example_datasets", "VALUE_ECA_86_v2.zip")
 #' o <- loadValueStations(obs.file, var = "tmin")
-#' prdfile <- list.files(file.path(find.package("R.VALUE"), "example_datasets"),
+#' prdfile <- list.files(file.path(find.package("VALUE"), "example_datasets"),
 #'                       pattern = "example_predictions_tmin_portal_exp1a_deterministic",
 #'                       full.names = TRUE)
 #' # Load predictions

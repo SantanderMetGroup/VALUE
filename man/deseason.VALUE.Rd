@@ -46,7 +46,7 @@ the annual series, rather than in particular seasons. Seasonal slices can be sel
 }
 \examples{
 \dontrun{
-obs.file <- file.path(find.package("R.VALUE"),"example_datasets","VALUE_ECA_86_v2.zip")
+obs.file <- file.path(find.package("VALUE"),"example_datasets","VALUE_ECA_86_v2.zip")
 # Load 1 station (Innsbruck) as example:
 stationObj <- loadValueStations(obs.file, var = "tmin", stationID = "000013", years = 1991:1993)
 # Test different window sizes:

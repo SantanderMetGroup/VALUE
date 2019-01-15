@@ -4,8 +4,8 @@
 \alias{measure.ratio}
 \title{Ratio}
 \usage{
-measure.ratio(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL,
-  dates)
+measure.ratio(indexObs = NULL, indexPrd = NULL, obs = NULL,
+  prd = NULL, dates)
 }
 \arguments{
 \item{indexObs}{index computed from the observations}

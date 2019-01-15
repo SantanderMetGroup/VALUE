@@ -45,7 +45,7 @@
 #' @author J. Bedia 
 #' @family loading
 #' @examples \dontrun{
-#' obs.dataset <- file.path(find.package("R.VALUE"), "example_datasets", "VALUE_ECA_86_v2.zip")
+#' obs.dataset <- file.path(find.package("VALUE"), "example_datasets", "VALUE_ECA_86_v2.zip")
 #' # All data
 #' obs <- loadValueStations(dataset = obs.dataset, var = "tmean")
 #' # Selection by lon-lat

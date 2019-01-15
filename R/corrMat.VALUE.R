@@ -54,9 +54,9 @@
 #' @author J. Bedia 
 #' @export
 #' @examples \dontrun{
-#' obs.file <- file.path(find.package("R.VALUE"),"example_datasets","VALUE_ECA_86_v2.zip")
+#' obs.file <- file.path(find.package("VALUE"),"example_datasets","VALUE_ECA_86_v2.zip")
 #' stationObj <- loadValueStations(obs.file, "precip")
-#' predictions.file <- file.path(find.package("R.VALUE"),"example_datasets",
+#' predictions.file <- file.path(find.package("VALUE"),"example_datasets",
 #'                                   "example_predictions_precip_portal_exp1a_deterministic.zip")
 #' prd <- loadValuePredictions(stationObj, predictions.file)                                  
 #' # Correlation matrix of annual data:                                  

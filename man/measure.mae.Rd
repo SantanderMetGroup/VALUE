@@ -4,8 +4,8 @@
 \alias{measure.mae}
 \title{Mean absolute error}
 \usage{
-measure.mae(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL,
-  dates)
+measure.mae(indexObs = NULL, indexPrd = NULL, obs = NULL,
+  prd = NULL, dates)
 }
 \arguments{
 \item{indexObs}{index computed from the observations}

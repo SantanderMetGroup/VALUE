@@ -6,4 +6,6 @@ ignore
 .Rbuildignore
 .Rprofile
 *~
+VALUE.Rproj
+.gitignore
 

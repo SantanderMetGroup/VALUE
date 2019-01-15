@@ -1,5 +1,5 @@
-The R.VALUE package
-===================
+The VALUE package
+=================
 
 The main objective of the [VALUE](http://www.value-cost.eu) COST action is the validation and integration of downscaling methods for climate change research. To this aim, a number of [indices and measures](http://www.value-cost.eu/reports) have been identified in order to validate different aspects regarding the performance of the downscaling methods. These indices have been implemented in R by the [VALUE cross-cutting group](http://www.value-cost.eu/cross-cutting) and are collected in this public package for further collaboration and extension with other initiatives, as well as research reproducibility.   
 
@@ -18,7 +18,7 @@ Alternatively, you can download the sources from the [releases tab](https://gith
 Once, installed, for a quick overview:
 
 ```r
-library(R.VALUE)
-help(package="R.VALUE")
+library(VALUE)
+help(package="VALUE")
 ```
 

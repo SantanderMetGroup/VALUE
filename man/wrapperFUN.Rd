@@ -7,8 +7,9 @@
 wrapperFUN(metric = c("obs", "pred", "measure"), names = NULL,
   season = c("annual", "DJF", "MAM", "JJA", "SON"),
   member.aggregation = "none", n.mem = NULL, index.fun = NULL,
-  measure.fun = NULL, index.args = NULL, measure.args = NULL, o = o,
-  p = p, processes = data.frame(), processNames = c(), na.prop = 1)
+  measure.fun = NULL, index.args = NULL, measure.args = NULL,
+  o = o, p = p, processes = data.frame(), processNames = c(),
+  na.prop = 1)
 }
 \arguments{
 \item{metric}{Character vector.}
@@ -57,9 +58,9 @@ This function is not envisaged to be directly called by the user. It is internal
 \examples{
 \dontrun{
 # Load observations
-obs.file <- file.path(find.package("R.VALUE"), "example_datasets", "VALUE_ECA_86_v2.zip")
+obs.file <- file.path(find.package("VALUE"), "example_datasets", "VALUE_ECA_86_v2.zip")
 o <- loadValueStations(obs.file, var = "tmin")
-prdfile <- list.files(file.path(find.package("R.VALUE"), "example_datasets"),
+prdfile <- list.files(file.path(find.package("VALUE"), "example_datasets"),
                       pattern = "example_predictions_tmin_portal_exp1a_deterministic",
                       full.names = TRUE)
 # Load predictions

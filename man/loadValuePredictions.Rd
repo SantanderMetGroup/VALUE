@@ -40,16 +40,16 @@ The idea of this function is to rely on the previously loaded observations data,
 \examples{
  \dontrun{
 #Example predictions
-obs.dataset <- file.path(find.package("R.VALUE"), "example_datasets", "VALUE_ECA_86_v2.zip")
+obs.dataset <- file.path(find.package("VALUE"), "example_datasets", "VALUE_ECA_86_v2.zip")
 obs <- loadValueStations(obs.dataset, "tmin", season = 6:8, years = 2001)
 # Loading deterministic predictions
-pred.file1 <- file.path(find.package("R.VALUE"),
+pred.file1 <- file.path(find.package("VALUE"),
                         "example_datasets",
                         "example_predictions_tmin_portal_exp1a_deterministic.zip")
 pred <- loadValuePredictions(obs, pred.file1)
 str(pred$Data) # 2D array
 # Loading stochastic predictions (several realizations)
-pred.file2 <- file.path(find.package("R.VALUE"),
+pred.file2 <- file.path(find.package("VALUE"),
                         "example_datasets",
                         "example_predictions_tmin_portal_exp1a_stochastic.zip")
 pred2 <- loadValuePredictions(obs, pred.file2)
@@ -62,3 +62,4 @@ str(pred3$Data) # 3D array with 'member' dimension of length 2
 \seealso{
 Other loading: \code{\link{loadValueStations}}
 }
+\concept{loading}

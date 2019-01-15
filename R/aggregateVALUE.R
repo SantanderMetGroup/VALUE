@@ -32,7 +32,7 @@
 #'
 #' @examples
 #'
-#' obs.file <- file.path(find.package("R.VALUE"),
+#' obs.file <- file.path(find.package("VALUE"),
 #'                       "example_datasets",
 #'                       "VALUE_ECA_86_v2.zip")
 #' tmin.DJF.daily <- loadValueStations(obs.file, "tmin",

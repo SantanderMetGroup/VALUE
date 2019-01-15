@@ -4,8 +4,8 @@
 \alias{corrMat.VALUE}
 \title{Correlation matrix for paper Figures 4 and 5 on spatial validation}
 \usage{
-corrMat.VALUE(stationObj, predictionObj = NULL, season = c("annual", "DJF",
-  "MAM", "JJA", "SON"), method = "pearson", type = "after",
+corrMat.VALUE(stationObj, predictionObj = NULL, season = c("annual",
+  "DJF", "MAM", "JJA", "SON"), method = "pearson", type = "after",
   max.na.prop = 0.25, deseason = TRUE, window.width = 31)
 }
 \arguments{
@@ -55,9 +55,9 @@ the maximum allowed proportion of missing data to 1.
 }
 \examples{
 \dontrun{
-obs.file <- file.path(find.package("R.VALUE"),"example_datasets","VALUE_ECA_86_v2.zip")
+obs.file <- file.path(find.package("VALUE"),"example_datasets","VALUE_ECA_86_v2.zip")
 stationObj <- loadValueStations(obs.file, "precip")
-predictions.file <- file.path(find.package("R.VALUE"),"example_datasets",
+predictions.file <- file.path(find.package("VALUE"),"example_datasets",
                                   "example_predictions_precip_portal_exp1a_deterministic.zip")
 prd <- loadValuePredictions(stationObj, predictions.file)                                  
 # Correlation matrix of annual data:                                  
