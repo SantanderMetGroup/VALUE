@@ -1,0 +1,26 @@
+CODE;FUNCTION CALL;DESCRIPTION
+ts.cmIndex;measure.cm('what' = 'CvM');Cramer von Mises Index
+ts.cmpval;measure.cm('what' = 'pval');Cramer von Mises Index p-value
+ts.cmksdiff;measure.cm('what' = 'KSdiff');Maximum absolute difference between the distributions
+ts.rp;measure.cor('method' = 'pearson');Pearson correlation
+ts.rs;measure.cor('method' = 'spearman');Spearman correlation
+ts.MAE;measure.mae();Mean Absolute Error
+ts.RMSE;measure.rmse();Root Mean Square Error
+bias;measure.bias();Pred-Obs
+biasRel;measure.bias.rel();(Pred-Obs)/Obs
+ratio;measure.ratio();Pred/Obs
+ts.rp_deseason;measure.cor('deseason' = 31, 'method' = 'pearson');Pearson correlation computed on the deseasoned series
+ts.nDays;measure.nDays();Count of days used to calculate the indices (exluding NaNs)
+ts.BSFrost;measure.bs('condition' = 'LT', 'threshold' = 0);Brier score of Frost days (Tmin<0)
+ts.BSIce;measure.bs('condition' = 'LT', 'threshold' = 0);Brier score of ice days (Tmax<0)
+ts.BSSummer;measure.bs('condition' = 'GT', 'threshold' = 25);Brier score of summer days (Tmax>25)
+ts.BSHot;measure.bs('condition' = 'GT', 'threshold' = 30);Brier score of hot days (Tmax>30)
+ts.BSTropical;measure.bs('condition' = 'GT', 'threshold' = 20);Brier score of tropical nights (Tmin>20)
+ts.cmksdiffWet;measure.cm('what' = 'KSdiff', 'threshold' = 1);Maximum absolute difference between the distributions (for wet days)
+ts.cmpvalWet;measure.cm('what' = 'pval', 'threshold' = 1);Cramer von Mises Index p-value (for Wet days)
+ts.cmIndexWet;measure.cm('what' = 'CvM', 'threshold' = 1);Cramer von Mises Index (for wet days)
+biasCirc;measure.bias.circ();Function to compute the bias considering circular series
+ts.rpY;measure.cor('aggregation' = 'annual', 'dates' = TRUE, 'method' = 'pearson');Pearson correlation computed on the yearly-averaged series
+ts.ks;measure.ks();Two-sided KS score
+ts.rp1Y;measure.corlongterm('detrend' = TRUE, 'timescale' = 1, 'dates' = TRUE, 'method' = 'pearson');Pearson correlation computed in the filtered series (one year)
+ts.rp7Y;measure.corlongterm('detrend' = FALSE, 'timescale' = 7, 'dates' = TRUE, 'method' = 'pearson');Pearson correlation computed in the filtered series (seven year)
