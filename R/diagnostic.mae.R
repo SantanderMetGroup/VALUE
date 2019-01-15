@@ -7,12 +7,12 @@
 #' @export
 
 
-measure.mae <- function(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL, dates) {
-      if (length(obs) <= 1) {
-            stop("Observed time series is needed")
-      }
-      if (length(prd) <= 1) {
-            stop("Predicted time series is needed")
-      }
-      index.mean(abs(prd - obs))
+diagnostic.mae <- function(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL, dates) {
+    if (length(obs) <= 1) {
+        stop("Observed time series is needed")
+    }
+    if (length(prd) <= 1) {
+        stop("Predicted time series is needed")
+    }
+    index.mean(abs(prd - obs))
 }

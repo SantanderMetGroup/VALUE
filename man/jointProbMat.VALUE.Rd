@@ -30,7 +30,7 @@ multiple members be performed \code{"after"} (the default) or \code{"before"} co
 If \code{prob} is used, the joint exceedance probabilities will be calculated (i.e., the probability of an occurrence above the \code{prob} percentile
 in location A given the same exceedance in location B).}
 
-\item{output}{Character string indicating the type of measure to be retained. Default to \code{"MI"} for the mutual information criterion.
+\item{output}{Character string indicating the type of diagnostic to be retained. Default to \code{"MI"} for the mutual information criterion.
 For the joint probabilities use \code{"jointProb"}. See details.}
 
 \item{threshold}{Threshold above which values are used/discarded (i.e., values greater or equal than \code{threshold} are considered as Wet).}

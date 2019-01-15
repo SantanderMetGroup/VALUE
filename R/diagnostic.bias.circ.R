@@ -6,7 +6,7 @@
 #' @author D. San-Martin
 #' @export
 
-measure.bias.circ <- function(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL, dates) {
+diagnostic.bias.circ <- function(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL, dates) {
       if (is.null(indexObs) | is.null(indexPrd)) {
             return(NA)
       }
