@@ -5,6 +5,11 @@ The main objective of the [VALUE](http://www.value-cost.eu) COST action is the v
 
 The package includes R functions used to read the observational datasets (and output downscaled predictions) in [VALUE data format](http://www.value-cost.eu/WG2/stationdataformat) as well as the auxiliary (and wrapper) functions used by the [VALUE validation portal](http://www.value-cost.eu/validationportal) to compute these indices. The data structures are integrated with other climate data access and analysis tools namely [loadeR](https://github.com/SantanderMetGroup/loadeR), for local and remote data access (for instance to the Santander MetGroup User Data Gateway, [UDG](http://www.meteo.unican.es/en/dataservices)) and [downscaleR](https://github.com/SantanderMetGroup/downscaleR), a R package for bias correction and statistical downscaling.
 
+### Reference
+
+Gutiérrez, J.M., Maraun, D., Widmann, M., Huth, R., Hertig, E., Benestad, R., Roessler, O., Wibig, J., Wilcke, R., Kotlarski, S., San Martín, D., Herrera, S., Bedia, J., Casanueva, A., Manzanas, R., Iturbide, M., Vrac, M., Dubrovsky, M., Ribalaygua, J., Pórtoles, J., Räty, O., Räisänen, J., Hingray, B., Raynaud, D., Casado, M.J., Ramos, P., Zerenner, T., Turco, M., Bosshard, T., Štěpánek, P., Bartholy, J., Pongracz, R., Keller, D.E., Fischer, A.M., Cardoso, R.M., Soares, P.M.M., Czernecki, B., Pagé, C., 2018. An intercomparison of a large ensemble of statistical downscaling methods over Europe: Results from the VALUE perfect predictor cross-validation experiment. International Journal of Climatology. https://doi.org/10.1002/joc.5462
+
+
 ### Package installation
 
 A direct method for installing the most recent stable release requires the package `devtools`. Within R, just type:

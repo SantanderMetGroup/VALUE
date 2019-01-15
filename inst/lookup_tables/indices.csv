@@ -1,58 +1,58 @@
-CODE;FUNCTION CALL;DESCRIPTION
-Mean;index.mean();Mean
-Var;index.var();Quasi-variance
-Skewness;index.skew();Skewness
-R01;index.freq('freq.type' = 'rel', 'condition' = 'GE', 'threshold' = 1);Relative frequency of wet days (precip >= 1mm)
-R10p;index.amountFreqGE('threshold' = 10);Precipitation amount falling in days with precip >= 10mm
-R10;index.freq('freq.type' = 'rel', 'condition' = 'GE', 'threshold' = 10);Relative frequency of days with precip >= 10mm
-R20p;index.amountFreqGE('threshold' = 20);Precipitation amount falling in days with precip >= 20mm
-R20;index.freq('freq.type' = 'rel', 'condition' = 'GE', 'threshold' = 20);Relative frequency of days with precip >= 20mm
-WWProb;index.freqWW('threshold' = 1);Wet-wet transition probability (wet >=1mm)
-DWProb;index.freqDW('threshold' = 1);Dry-wet transition probability (wet >=1mm)
-AC1;index.acf('lag.max' = 1);Lag-1 autocorrelation
-AC2;index.acf('lag.max' = 2);Lag-2 autocorrelation
-AC3;index.acf('lag.max' = 3);Lag-3 autocorrelation
-P98;index.prcXXth('prob' = 0.98);98th percentile
-P98Wet;index.prcXXth('prob' = 0.98, 'threshold' = 1);98th percentile of wet (>=1 mm) days
-RV20_min;index.rv('annual.index' = TRUE, 'tail' = 'left', 'prob' = 20);20-years return value (min values, left tail)
-RV20_max;index.rv('annual.index' = TRUE, 'tail' = 'right', 'prob' = 20);20-years return value (max values, right tail)
-FB0;index.freq('freq.type' = 'rel', 'condition' = 'LT', 'threshold' = 0);"Relative frequency of days < 0 (Ice days for Tmax; Frost days for Tmin)"
-FB15;index.freq('freq.type' = 'rel', 'condition' = 'LT', 'threshold' = 15);Relative frequency of days < 15
-FA30;index.freq('freq.type' = 'rel', 'condition' = 'GT', 'threshold' = 30);Relative frequency of days > 30
-FA25;index.freq('freq.type' = 'rel', 'condition' = 'GT', 'threshold' = 25);Relative frequency of days > 25 (Summer days for Tmax)
-FA20;index.freq('freq.type' = 'rel', 'condition' = 'GT', 'threshold' = 20);Relative frequency of days > 20 (Tropical nights for Tmin)
-WetSpellP50;index.spell.prcXXth('dates' = TRUE, 'condition' = 'GE', 'prob' = 0.5, 'threshold' = 1);Median of wet (>=1mm) Spell Length Distribution
-DrySpellP50;index.spell.prcXXth('dates' = TRUE, 'condition' = 'LT', 'prob' = 0.5, 'threshold' = 1);Median of dry (<1mm) Spell Length Distribution
-WetSpellP90;index.spell.prcXXth('dates' = TRUE, 'condition' = 'GE', 'prob' = 0.9, 'threshold' = 1);90th percentile of wet (>=1mm)  Spell Length Distribution
-DrySpellP90;index.spell.prcXXth('dates' = TRUE, 'condition' = 'LT', 'prob' = 0.9, 'threshold' = 1);90th percentile of dry (<1mm)  Spell Length Distribution
-WetAnnualMaxSpell;index.spellmax.annual.prcXXth('dates' = TRUE, 'condition' = 'GE', 'prob' = 0.5, 'threshold' = 1);Median of the annual wet (>=1mm) spell maxima
-DryAnnualMaxSpell;index.spellmax.annual.prcXXth('dates' = TRUE, 'condition' = 'LT', 'prob' = 0.5, 'threshold' = 1);Median of the annual dry (<1mm) spell maxima
-AnnualCycleMin;index.annual.cycle('dates' = TRUE, 'type' = 'min');Minimum of the daily annual cycle
-AnnualCycleMax;index.annual.cycle('dates' = TRUE, 'type' = 'max');Maximum of the daily annual cycle
-AnnualCycleAmp;index.annual.cycle('dates' = TRUE, 'type' = 'amp');Amplitude of the daily annual cycle
-AnnualCycleRelAmp;index.annual.cycle('dates' = TRUE, 'type' = 'relamp');Relative amplitude of the daily annual cycle (%, relative to the mean)
-ProVarLowFreq365;index.lfvar('lowVarPeriod' = 365);Proportion of variance in low frequency (annual)
-ProVarLowFreq30;index.lfvar('lowVarPeriod' = 30);Proportion of variance in low frequency (monthly)
-P02;index.prcXXth('prob' = 0.02);2nd percentile
-SDII;index.meanGE('threshold' = 1);Mean wet-day (>=1mm)  precipitation (Simple Day Intensity Index)
-WarmSpellP50;index.spell.prcXXth('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'GT', 'prob' = 0.5, 'threshold' = 0.9);Median of the warm (> 90th percentile) Spell Length Distribution
-WarmSpellP90;index.spell.prcXXth('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'GT', 'prob' = 0.9, 'threshold' = 0.9);90th percentile of the annual warm (> 90th percentile) spell maxima
-WarmAnnualMaxSpell;index.spellmax.annual.prcXXth('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'GT', 'prob' = 0.5, 'threshold' = 0.9);Median of the annual warm (> 90th percentile) spell maxima
-ColdSpellP50;index.spell.prcXXth('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'LT', 'prob' = 0.5, 'threshold' = 0.1);Median of the cold (< 10th percentile) Spell Length Distribution
-ColdSpellP90;index.spell.prcXXth('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'LT', 'prob' = 0.9, 'threshold' = 0.1);90th percentile of the cold (< 10th percentile) Spell Length Distribution
-ColdAnnualMaxSpell;index.spellmax.annual.prcXXth('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'LT', 'prob' = 0.5, 'threshold' = 0.1);Median of the annual cold (< 10th percentile) spell maxima
-ColdSpellMean;index.spell.mean('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'LT', 'threshold' = 0.1);Mean of the cold (< 10th percentile) Spell Length Distribution
-WarmSpellMean;index.spell.mean('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'GT', 'threshold' = 0.9);Mean of the warm (> 90th percentile) Spell Length Distribution
-DrySpellMean;index.spell.mean('dates' = TRUE, 'condition' = 'LT', 'threshold' = 1);Mean of dry (<1mm) Spell Length Distribution
-WetSpellMean;index.spell.mean('dates' = TRUE, 'condition' = 'GE', 'threshold' = 1);Mean of wet (>=1mm) Spell Length Distribution
-P98WetAmount;index.wetAmount.prcXXth('prob' = 0.98);Total amount above 98th percentile of wet (>=1 mm) days
-AnnualCyclePhase;index.annual.cycle('dates' = TRUE, 'type' = 'phase');Maximum of the daily annual cycle including a phase
-AnnualCycleAsymmetry;index.annual.cycle('dates' = TRUE, 'type' = 'asymmetry');Difference in days between maximum and minimum of the filtered cycle
-VarM;index.internal.var('dates' = TRUE, 'type' = 'monthly');Monthly variability
-VarY;index.internal.var('dates' = TRUE, 'type' = 'interannual');Interannual variability
-Trend;index.trend('dates' = TRUE, 'output' = 'coef');Linear trend of the interannual time series.
-TrendSig;index.trend('dates' = TRUE, 'output' = 'sig');Significance (0.05 level) of the trend (binary, 1=significant)
-AnnualCycleAmp_filtered;index.annual.cycle.filtered('peak' = 1, 'dates' = TRUE, 'type' = 'amp');Amplitude of the daily annual cycle after filtering
-AnnualCycleRelAmp_filtered;index.annual.cycle.filtered('peak' = 1, 'dates' = TRUE, 'type' = 'amprel');Relative amplitude of the daily annual cycle (%, relative to the mean) after filtering
-AnnualCyclePhasePeak1_filtered;index.annual.cycle.filtered('peak' = 1, 'dates' = TRUE, 'type' = 'phase');
-AnnualCyclePhasePeak2_filtered;index.annual.cycle.filtered('peak' = '2', 'dates' = TRUE, 'type' = 'phase');
+CODE	FUNCTION CALL	DESCRIPTION	VAR
+Mean	index.mean()	Mean	
+Var	index.var()	Quasi-variance	
+Skewness	index.skew()	Skewness	
+R01	index.freq('freq.type' = 'rel', 'condition' = 'GE', 'threshold' = 1)	Relative frequency of wet days (precip >= 1mm)	precip
+R10p	index.amountFreqGE('threshold' = 10)	Precipitation amount falling in days with precip >= 10mm	precip
+R10	index.freq('freq.type' = 'rel', 'condition' = 'GE', 'threshold' = 10)	Relative frequency of days with precip >= 10mm	precip
+R20p	index.amountFreqGE('threshold' = 20)	Precipitation amount falling in days with precip >= 20mm	precip
+R20	index.freq('freq.type' = 'rel', 'condition' = 'GE', 'threshold' = 20)	Relative frequency of days with precip >= 20mm	precip
+WWProb	index.freqWW('threshold' = 1)	Wet-wet transition probability (wet >=1mm)	precip
+DWProb	index.freqDW('threshold' = 1)	Dry-wet transition probability (wet >=1mm)	precip
+AC1	index.acf('lag.max' = 1)	Lag-1 autocorrelation	
+AC2	index.acf('lag.max' = 2)	Lag-2 autocorrelation	
+AC3	index.acf('lag.max' = 3)	Lag-3 autocorrelation	
+P98	index.prcXXth('prob' = 0.98)	98th percentile	
+P98Wet	index.prcXXth('prob' = 0.98, 'threshold' = 1)	98th percentile of wet (>=1 mm) days	precip
+RV20_min	index.rv('annual.index' = TRUE, 'tail' = 'left', 'prob' = 20)	20-years return value (min values, left tail)	
+RV20_max	index.rv('annual.index' = TRUE, 'tail' = 'right', 'prob' = 20)	20-years return value (max values, right tail)	
+FB0	index.freq('freq.type' = 'rel', 'condition' = 'LT', 'threshold' = 0)	Relative frequency of days < 0 (Ice days for Tmax; Frost days for Tmin)	temp
+FB15	index.freq('freq.type' = 'rel', 'condition' = 'LT', 'threshold' = 15)	Relative frequency of days < 15	temp
+FA30	index.freq('freq.type' = 'rel', 'condition' = 'GT', 'threshold' = 30)	Relative frequency of days > 30	temp
+FA25	index.freq('freq.type' = 'rel', 'condition' = 'GT', 'threshold' = 25)	Relative frequency of days > 25 (Summer days for Tmax)	temp
+FA20	index.freq('freq.type' = 'rel', 'condition' = 'GT', 'threshold' = 20)	Relative frequency of days > 20 (Tropical nights for Tmin)	temp
+WetSpellP50	index.spell.prcXXth('dates' = TRUE, 'condition' = 'GE', 'prob' = 0.5, 'threshold' = 1)	Median of wet (>=1mm) Spell Length Distribution	precip
+DrySpellP50	index.spell.prcXXth('dates' = TRUE, 'condition' = 'LT', 'prob' = 0.5, 'threshold' = 1)	Median of dry (<1mm) Spell Length Distribution	precip
+WetSpellP90	index.spell.prcXXth('dates' = TRUE, 'condition' = 'GE', 'prob' = 0.9, 'threshold' = 1)	90th percentile of wet (>=1mm)  Spell Length Distribution	precip
+DrySpellP90	index.spell.prcXXth('dates' = TRUE, 'condition' = 'LT', 'prob' = 0.9, 'threshold' = 1)	90th percentile of dry (<1mm)  Spell Length Distribution	precip
+WetAnnualMaxSpell	index.spellmax.annual.prcXXth('dates' = TRUE, 'condition' = 'GE', 'prob' = 0.5, 'threshold' = 1)	Median of the annual wet (>=1mm) spell maxima	precip
+DryAnnualMaxSpell	index.spellmax.annual.prcXXth('dates' = TRUE, 'condition' = 'LT', 'prob' = 0.5, 'threshold' = 1)	Median of the annual dry (<1mm) spell maxima	precip
+AnnualCycleMin	index.annual.cycle('dates' = TRUE, 'type' = 'min')	Minimum of the daily annual cycle	temp
+AnnualCycleMax	index.annual.cycle('dates' = TRUE, 'type' = 'max')	Maximum of the daily annual cycle	temp
+AnnualCycleAmp	index.annual.cycle('dates' = TRUE, 'type' = 'amp')	Amplitude of the daily annual cycle	temp
+AnnualCycleRelAmp	index.annual.cycle('dates' = TRUE, 'type' = 'relamp')	Relative amplitude of the daily annual cycle (%, relative to the mean)	temp
+ProVarLowFreq365	index.lfvar('lowVarPeriod' = 365)	Proportion of variance in low frequency (annual)	
+ProVarLowFreq30	index.lfvar('lowVarPeriod' = 30)	Proportion of variance in low frequency (monthly)	
+P02	index.prcXXth('prob' = 0.02)	2nd percentile	
+SDII	index.meanGE('threshold' = 1)	Mean wet-day (>=1mm)  precipitation (Simple Day Intensity Index)	precip
+WarmSpellP50	index.spell.prcXXth('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'GT', 'prob' = 0.5, 'threshold' = 0.9)	Median of the warm (> 90th percentile) Spell Length Distribution	temp
+WarmSpellP90	index.spell.prcXXth('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'GT', 'prob' = 0.9, 'threshold' = 0.9)	90th percentile of the annual warm (> 90th percentile) spell maxima	temp
+WarmAnnualMaxSpell	index.spellmax.annual.prcXXth('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'GT', 'prob' = 0.5, 'threshold' = 0.9)	Median of the annual warm (> 90th percentile) spell maxima	temp
+ColdSpellP50	index.spell.prcXXth('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'LT', 'prob' = 0.5, 'threshold' = 0.1)	Median of the cold (< 10th percentile) Spell Length Distribution	temp
+ColdSpellP90	index.spell.prcXXth('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'LT', 'prob' = 0.9, 'threshold' = 0.1)	90th percentile of the cold (< 10th percentile) Spell Length Distribution	temp
+ColdAnnualMaxSpell	index.spellmax.annual.prcXXth('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'LT', 'prob' = 0.5, 'threshold' = 0.1)	Median of the annual cold (< 10th percentile) spell maxima	temp
+ColdSpellMean	index.spell.mean('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'LT', 'threshold' = 0.1)	Mean of the cold (< 10th percentile) Spell Length Distribution	temp
+WarmSpellMean	index.spell.mean('threshold.type' = 'prob', 'dates' = TRUE, 'condition' = 'GT', 'threshold' = 0.9)	Mean of the warm (> 90th percentile) Spell Length Distribution	temp
+DrySpellMean	index.spell.mean('dates' = TRUE, 'condition' = 'LT', 'threshold' = 1)	Mean of dry (<1mm) Spell Length Distribution	precip
+WetSpellMean	index.spell.mean('dates' = TRUE, 'condition' = 'GE', 'threshold' = 1)	Mean of wet (>=1mm) Spell Length Distribution	precip
+P98WetAmount	index.wetAmount.prcXXth('prob' = 0.98)	Total amount above 98th percentile of wet (>=1 mm) days	precip
+AnnualCyclePhase	index.annual.cycle('dates' = TRUE, 'type' = 'phase')	Maximum of the daily annual cycle including a phase	
+AnnualCycleAsymmetry	index.annual.cycle('dates' = TRUE, 'type' = 'asymmetry')	Difference in days between maximum and minimum of the filtered cycle	
+VarM	index.internal.var('dates' = TRUE, 'type' = 'monthly')	Monthly variability	
+VarY	index.internal.var('dates' = TRUE, 'type' = 'interannual')	Interannual variability	
+Trend	index.trend('dates' = TRUE, 'output' = 'coef')	Linear trend of the interannual time series.	
+TrendSig	index.trend('dates' = TRUE, 'output' = 'sig')	Significance (0.05 level) of the trend (binary, 1=significant)	
+AnnualCycleAmp_filtered	index.annual.cycle.filtered('peak' = 1, 'dates' = TRUE, 'type' = 'amp')	Amplitude of the daily annual cycle after filtering	
+AnnualCycleRelAmp_filtered	index.annual.cycle.filtered('peak' = 1, 'dates' = TRUE, 'type' = 'amprel')	Relative amplitude of the daily annual cycle (%, relative to the mean) after filtering	
+AnnualCyclePhasePeak1_filtered	index.annual.cycle.filtered('peak' = 1, 'dates' = TRUE, 'type' = 'phase')		
+AnnualCyclePhasePeak2_filtered	index.annual.cycle.filtered('peak' = '2', 'dates' = TRUE, 'type' = 'phase')		
