@@ -4,14 +4,14 @@
 \alias{valueIndex}
 \title{VALUE index calculation}
 \usage{
-valueIndex(ts, dates, indices)
+valueIndex(ts, dates = NULL, indices)
 }
 \arguments{
 \item{ts}{A vector containing the data}
 
 \item{dates}{A character (or \code{POSIXct}) vector following the format \dQuote{YYYY-MM-DD}
-(i.e., \code{format = "\%Y-\%m-\%d"} as in \code{\link{strptime}}). This is directly passed by the
- VALUE objects (either stations or predictions) through the element \code{object$Dates$start}.}
+(i.e., \code{format = "\%Y-\%m-\%d"} as in \code{\link{strptime}}). Note that the dates are not required 
+by all indices, so the default is \code{NULL}. The function will yield an error if dates are required but not supplied.}
 
 \item{indices}{A character vector of index codes to be computed.}
 }
@@ -22,9 +22,21 @@ A named list of output indices
 Generic funtion to compute VALUE indices from a time series
 }
 \examples{
+\dontrun{
 obs.dataset <- file.path(find.package("VALUE"), "example_datasets", "VALUE_ECA_86_v2.zip")
-obs <- loadValueStations(dataset = obs.dataset, var = "tmax", stationID = "000232")
+library(loadeR)
+obs <- loadStationData(dataset = obs.dataset, var = "tmax", stationID = "000232")
 ts <- as.vector(obs$Data)
 dates <- obs$Dates$start
-valueIndex(ts, dates, indices = c("AC1", "AC2", "FA25", "FA30", "FB15", "AnnualCycleAmp"))
+valueIndex(ts, dates = dates, indices = c("AC1", "AC2", "FA25", "FA30", "FB15", "AnnualCycleAmp"))
+# In the following example the same set of indices are calculated for the VALUE-ECA86
+# dataset of 86 stations across Europe:
+obs2 <- loadStationData(dataset = obs.dataset, var = "tmax")
+str(obs2$Data)
+a <- apply(obs2$Data, MARGIN = 2, "valueIndex",
+           dates = dates,
+           indices = c("AC1", "AC2", "FA25", "FA30", "FB15", "AnnualCycleAmp"))
+# The result is a matrix of 6 rows (indices) and 86 columns (stations):
+str(a)            
+}
 }

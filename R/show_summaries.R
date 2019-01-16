@@ -57,7 +57,7 @@ show.indices <- function(index.code = NULL, function.name = NULL, filter = NULL)
 #' str(diagnostic.table)
 #' # Search by index code:
 #' show.diagnostics(diagnostic.code = "ts.BSFrost")
-#' # Search by filters:
+#' # Search by filters, e.g. Brier Score indices:
 #' show.diagnostics(filter = "Brier")
 
 show.diagnostics <- function(diagnostic.code = NULL, function.name = NULL, filter = NULL) {
