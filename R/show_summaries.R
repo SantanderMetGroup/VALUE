@@ -82,6 +82,7 @@ show.measures <- function(measure.code = NULL, function.name = NULL, filter = NU
 #' @param table.type Character string indicating what table to read. Two possible values, either
 #' \code{"measures"} or \code{"indices"}.
 #' @return The lookup table requested, as a \code{data.frame}.
+#' @importFrom utils read.table
 #' @keywords internal
 #' @importFrom magrittr %>% 
 

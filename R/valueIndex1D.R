@@ -6,6 +6,7 @@
 #'  by all indices, so the default is \code{NULL}. The function will yield an error if dates are required but not supplied.
 #' @param indices A character vector of index codes to be computed.
 #' @return A named list of output indices
+#' @author J. Bedia
 #' @export
 #' @examples \dontrun{
 #' obs.dataset <- file.path(find.package("VALUE"), "example_datasets", "VALUE_ECA_86_v2.zip")

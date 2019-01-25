@@ -35,7 +35,8 @@
 #'  the information required to define the predictions subset (time and station codes) is retrieved from 
 #'  the observations data subset.
 #' @export
-#' @importFrom utils unzip
+#' @importFrom utils unzip read.csv 
+#' @importFrom stats na.omit
 #' @importFrom abind abind
 #' @family loading
 #'@examples  \dontrun{

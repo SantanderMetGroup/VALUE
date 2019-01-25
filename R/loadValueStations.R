@@ -41,7 +41,7 @@
 #' \url{http://meteo.unican.es/work/loadeR/wiki/Rmd_html/OformatStationData.html} 
 #' \url{http://stackoverflow.com/questions/12460938/r-reading-in-a-zip-data-file-without-unzipping-it}
 #' @export
-#' @importFrom utils unzip
+#' @importFrom utils unzip read.csv tail
 #' @author J. Bedia 
 #' @family loading
 #' @examples \dontrun{
@@ -201,6 +201,7 @@ getLatLonDomainValueStations <- function(lonLim, latLim, lons, lats) {
 #' @param years A vector of (continuous) year selection
 #' @return A list with a vector of time index positions and the corresponding POSIXlt dates
 #' @author J. Bedia 
+#' @importFrom utils head tail
 #' @keywords internal
 
 getTimeDomainValueStations <- function(timeDates, season, years) {

@@ -1,6 +1,6 @@
 #' @title Cramer von Misses
 #' @description Function to compare the observed and predicted distribution using the Cramer von Misses index.
-#' @author Ole Roessler \email{ole.roessler@@giub.unibe.ch}, J. Bedia, D. San-Mart\'in, S. Herrera
+#' @author Ole Roessler, J. Bedia, D. San-Martín, S. Herrera
 #' @template templateMeasureParams
 #' @param dates dates
 #' @param Nbins Number of bins used for discretization. Default to 100.
@@ -10,6 +10,7 @@
 #' @param threshold Optional. Numeric value indicating the threshold above which to compute the measure.
 #' Mainly used for precipitation, tipically to use only the wet days in the analysis (i.e.: \code{threshold = 1}).
 #' @source L. Sachs and J. Hedderich (2006). Angewandte Statistik. Springer.  
+#' @importFrom graphics hist
 #' @return A floating number with the measure indicated in \code{what} argument.
 #' @export
 

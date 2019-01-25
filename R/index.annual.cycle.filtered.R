@@ -1,6 +1,6 @@
 #' @title Filtered annual cycle maxima statistics
 #' @description Returns the amplitude or the location of the maxima of the annual cycle
-#' @author D. Maraun, J. Bedia, D. San-Martin, J.M. Gutierrez
+#' @author D. Maraun, J. Bedia, D. San-Martín, J.M. Gutiérrez
 #' @template templateIndexParams
 #' @template templateDates
 #' @param peak = 1 or 2 (maximum or secondary maximum - higher order peaks are ignored)
@@ -8,6 +8,7 @@
 #' @param thresh Threshold that defines weak and double maxima (relative to amplitude of annual cycle)
 #' @return A float number corresponding to the amplitude or the (phase) day of the maxima
 #' @importFrom RcppEigen fastLm
+#' @importFrom stats predict
 #' @export
 #' @keywords internal
 
