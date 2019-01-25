@@ -7,7 +7,7 @@
 #' @export
 
 
-diagnostic.mae <- function(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL, dates) {
+measure.mae <- function(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL, dates) {
     if (length(obs) <= 1) {
         stop("Observed time series is needed")
     }

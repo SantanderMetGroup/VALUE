@@ -31,7 +31,7 @@
 #' @param prob Default to NULL (unused). Otherwise, a float number in the range (0,1) defining the quantile threshold to be calculated.
 #' If \code{prob} is used, the joint exceedance probabilities will be calculated (i.e., the probability of an occurrence above the \code{prob} percentile
 #' in location A given the same exceedance in location B).
-#' @param output Character string indicating the type of diagnostic to be retained. Default to \code{"MI"} for the mutual information criterion.
+#' @param output Character string indicating the type of measure to be retained. Default to \code{"MI"} for the mutual information criterion.
 #' For the joint probabilities use \code{"jointProb"}. See details.
 #' @param threshold Threshold above which values are used/discarded (i.e., values greater or equal than \code{threshold} are considered as Wet).
 #' @param max.na.prop Maximum allowed proportion of missing data (Default to 0.25). See details

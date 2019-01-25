@@ -12,9 +12,9 @@
 #' @export
 
 
-diagnostic.bs <- function(indexObs = NULL, indexPrd = NULL, obs, prd, dates,
-                          threshold = 0,
-                          condition) {
+measure.bs <- function(indexObs = NULL, indexPrd = NULL, obs, prd, dates,
+                       threshold = 0,
+                       condition) {
     if (length(obs) <= 1) {
         stop("Observed time series is needed")
     }

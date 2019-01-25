@@ -6,16 +6,9 @@
 #' @importFrom stats ks.test
 #' @export
 
-diagnostic.ks <- function(indexObs = NULL,
-                          indexPrd = NULL,
-                          obs,
-                          prd) {
-    if (length(obs) <= 1) {
-        stop("Observed time series is required")
-    }
-    if (length(prd) <= 1) {
-        stop("Predicted time series is required")
-    }
+measure.ks <- function(indexObs = NULL, indexPrd = NULL, obs, prd) {
+    if (length(obs) <= 1) stop("Observed time series is required")
+    if (length(prd) <= 1) stop("Predicted time series is required")
     unname(ks.test(obs, prd, alternative = "two.sided")$statistic)
 }
 

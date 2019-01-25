@@ -8,12 +8,12 @@ read.lookup.table(table.type)
 }
 \arguments{
 \item{table.type}{Character string indicating what table to read. Two possible values, either
-\code{"diagnostics"} or \code{"indices"}.}
+\code{"measures"} or \code{"indices"}.}
 }
 \value{
 The lookup table requested, as a \code{data.frame}.
 }
 \description{
-Read the internal lookup tables of indices and diagnostics
+Read the internal lookup tables of indices and measures
 }
 \keyword{internal}

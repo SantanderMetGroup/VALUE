@@ -13,7 +13,7 @@
 #' @export
 
 
-diagnostic.cor <- function(indexObs = NULL, indexPrd = NULL, obs, prd, dates,
+measure.cor <- function(indexObs = NULL, indexPrd = NULL, obs, prd, dates,
                            method = c("pearson", "kendall", "spearman"),
                            deseason = NULL, aggregation = NULL) {
     if (length(obs) <= 1) {

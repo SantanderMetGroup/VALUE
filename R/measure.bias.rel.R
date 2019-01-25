@@ -7,6 +7,6 @@
 #' @return A float number corresponding to the bias.
 #' @export
 
-diagnostic.bias.rel <- function(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL, dates) {
+measure.bias.rel <- function(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL, dates) {
     (indexPrd - indexObs) / indexObs
 }
