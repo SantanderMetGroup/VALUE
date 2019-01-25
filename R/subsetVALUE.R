@@ -70,6 +70,8 @@ subsetVALUE <- function(valueObj,
                         years = NULL,
                         lonLim = NULL,
                         latLim = NULL) {
+    .Deprecated(new = "subsetGrid", old = "subsetVALUE",
+                msg = "\'subsetVALUE\' is deprecated\nUse \'subsetGrid\' from package transformeR instead\n<https://github.com/SantanderMetGroup/transformeR>")
       if (!is.null(stationID)) valueObj <- subsetVALUE.stations(valueObj, stationID)
       if (!is.null(members)) valueObj <- subsetVALUE.members(valueObj, members)      
       if (!is.null(season)) valueObj <- subsetVALUE.season(valueObj, season)
