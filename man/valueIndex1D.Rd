@@ -40,3 +40,6 @@ a <- apply(obs2$Data, MARGIN = 2, "valueIndex1D",
 str(a)            
 }
 }
+\author{
+J. Bedia
+}

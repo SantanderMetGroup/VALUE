@@ -25,5 +25,5 @@ A float number corresponding to the mean absolute difference between the predict
 Function to compute the mean absolute difference between the observed and predicted time series.
 }
 \author{
-Daniel San-Mart\'in \email{daniel@predictia.es}, J. Bedia, D. San-Mart\'in, S. Herrera
+Daniel San-Martín, J. Bedia, S. Herrera
 }

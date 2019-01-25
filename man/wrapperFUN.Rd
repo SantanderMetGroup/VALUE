@@ -52,6 +52,10 @@ A 3D array with labelled dimensions station, season and metric
 \description{
 Launches the VALUE validation framework according to the arguments passed by the database.
 }
+\details{
+The function is intended for internal use only, in order to launch the validation framework through the VALUE portal.
+It is not meant for extrenal users.
+}
 \note{
 This function is not envisaged to be directly called by the user. It is internally called by the validation portal.
 }
@@ -80,5 +84,6 @@ str(vno)
 }
 }
 \author{
-J. Bedia, D. San Martin, M. Tuni
+J. Bedia, D. San Martín, M. Tuni
 }
+\keyword{internal}

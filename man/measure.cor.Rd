@@ -34,6 +34,6 @@ A float number corresponding to the correlation coefficient of choice between th
 Function to compute the temporal correlation between the observed and predicted time series.
 }
 \author{
-J. Bedia, D. San-Martin, S. Herrera
+J. Bedia, D. San-Martín, S. Herrera
 }
 \keyword{internal}

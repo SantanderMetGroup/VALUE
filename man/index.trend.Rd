@@ -29,3 +29,4 @@ Computes slope and significance of the interannual linear trend
 \author{
 J Bedia
 }
+\keyword{internal}

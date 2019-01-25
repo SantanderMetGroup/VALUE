@@ -38,5 +38,5 @@ A floating number with the measure indicated in \code{what} argument.
 Function to compare the observed and predicted distribution using the Cramer von Misses index.
 }
 \author{
-Ole Roessler \email{ole.roessler@giub.unibe.ch}, J. Bedia, D. San-Mart\'in, S. Herrera
+Ole Roessler, J. Bedia, D. San-Martín, S. Herrera
 }

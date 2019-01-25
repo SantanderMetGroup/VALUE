@@ -27,6 +27,6 @@ A float number corresponding to the amplitude or the (phase) day of the maxima
 Returns the amplitude or the location of the maxima of the annual cycle
 }
 \author{
-D. Maraun, J. Bedia, D. San-Martin, J.M. Gutierrez
+D. Maraun, J. Bedia, D. San-Martín, J.M. Gutiérrez
 }
 \keyword{internal}

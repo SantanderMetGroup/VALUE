@@ -25,5 +25,5 @@ A float number corresponding to the root mean square error between the predicted
 Function to compute the root mean square error between the observed and predicted time series.
 }
 \author{
-Daniel San-Mart\'in \email{daniel@predictia.es}, J. Bedia, D. San-Mart\'in, S. Herrera
+Daniel San-Martín, J. Bedia, S. Herrera
 }

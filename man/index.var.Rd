@@ -16,5 +16,5 @@ A float number corresponding to the variance of the input.
 Function to compute the variance index.
 }
 \author{
-Ole Roessler \email{ole.roessler@giub.unibe.ch}, J. Bedia, D. San-Mart\'in, S. Herrera
+Ole Roessler, J. Bedia, D. San-Mart\'in, S. Herrera
 }
