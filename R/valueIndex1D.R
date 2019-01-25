@@ -1,5 +1,5 @@
 #' @title VALUE index calculation
-#' @description Generic funtion to compute VALUE indices from a time series
+#' @description Atomic function to compute VALUE indices from a time series 
 #' @template templateIndexParams
 #' @param dates A character (or \code{POSIXct}) vector following the format \dQuote{YYYY-MM-DD}
 #'  (i.e., \code{format = "\%Y-\%m-\%d"} as in \code{\link{strptime}}). Note that the dates are not required 
@@ -13,19 +13,19 @@
 #' obs <- loadStationData(dataset = obs.dataset, var = "tmax", stationID = "000232")
 #' ts <- as.vector(obs$Data)
 #' dates <- obs$Dates$start
-#' valueIndex(ts, dates = dates, indices = c("AC1", "AC2", "FA25", "FA30", "FB15", "AnnualCycleAmp"))
+#' valueIndex1D(ts, dates = dates, indices = c("AC1", "AC2", "FA25", "FA30", "FB15", "AnnualCycleAmp"))
 #' # In the following example the same set of indices are calculated for the VALUE-ECA86
 #' # dataset of 86 stations across Europe:
 #' obs2 <- loadStationData(dataset = obs.dataset, var = "tmax")
 #' str(obs2$Data)
-#' a <- apply(obs2$Data, MARGIN = 2, "valueIndex",
+#' a <- apply(obs2$Data, MARGIN = 2, "valueIndex1D",
 #'            dates = dates,
 #'            indices = c("AC1", "AC2", "FA25", "FA30", "FB15", "AnnualCycleAmp"))
 #' # The result is a matrix of 6 rows (indices) and 86 columns (stations):
 #' str(a)            
 #' }
 
-valueIndex <- function(ts, dates = NULL, indices) {
+valueIndex1D <- function(ts, dates = NULL, indices) {
     out.list <- vapply(1:length(indices), FUN.VALUE = numeric(1), FUN = function(i) {
         arg.list <- list()
         arg.list[["ts"]] <- ts
