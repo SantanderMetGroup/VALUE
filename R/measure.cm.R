@@ -18,12 +18,8 @@ measure.cm <- function(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL,
                        Nbins = 100,
                        what = c("CvM", "pval", "KSdiff"),
                        threshold = NULL) {
-    if (length(obs) <= 1) {
-        stop("Observed time series is needed")
-    }
-    if (length(prd) <= 1) {
-        stop("Predicted time series is needed")
-    }
+    if (length(obs) <= 1) stop("Observed time series is needed")
+    if (length(prd) <= 1) stop("Predicted time series is needed")
     what <- match.arg(what, choices = c("CvM", "pval", "KSdiff"))
     if (!is.null(threshold)) {
         stopifnot(is.numeric(threshold))
@@ -41,7 +37,6 @@ measure.cm <- function(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL,
         hm.r <- hist(prd, breaks = breaks.r, plot = FALSE)
         fs <- cumsum(hm.s$counts) / length(obs)
         gr <- cumsum(hm.r$counts) / length(prd)
-        # KS <- max(abs(fs - gr))
         out <- max(abs(fs - gr)) # KSdiff
         if (what == "CvM" | what == "pval") {
             term2 <- sum((hm.s$counts + hm.r$counts) * ((fs - gr) ** 2))

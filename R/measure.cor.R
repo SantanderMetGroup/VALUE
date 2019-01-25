@@ -8,7 +8,7 @@
 #'   of the reference daily climatology. This argument is passed to \code{\link{deseason.VALUE}} via \code{\link{wrapperFUN}}.
 #' @param aggregation temporal aggregation options
 #' @return A float number corresponding to the correlation coefficient of choice between the predicted and observed series.
-#' @author J. Bedia, D. San-Martin, S. Herrera
+#' @author J. Bedia, D. San-Martín, S. Herrera
 #' @keywords internal
 #' @export
 
@@ -16,12 +16,8 @@
 measure.cor <- function(indexObs = NULL, indexPrd = NULL, obs, prd, dates,
                            method = c("pearson", "kendall", "spearman"),
                            deseason = NULL, aggregation = NULL) {
-    if (length(obs) <= 1) {
-        stop("Observed time series is needed")
-    }
-    if (length(prd) <= 1) {
-        stop("Predicted time series is needed")
-    }
+    if (length(obs) <= 1) stop("Observed time series is needed")
+    if (length(prd) <= 1) stop("Predicted time series is needed")
     if (is.null(aggregation)) {
         cor(obs, prd, use = "pairwise.complete.obs", method = method)    
     } else if (aggregation == "annual") {

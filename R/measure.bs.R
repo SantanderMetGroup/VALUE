@@ -15,12 +15,8 @@
 measure.bs <- function(indexObs = NULL, indexPrd = NULL, obs, prd, dates,
                        threshold = 0,
                        condition) {
-    if (length(obs) <= 1) {
-        stop("Observed time series is needed")
-    }
-    if (length(prd) <= 1) {
-        stop("Predicted time series is needed")
-    }
+    if (length(obs) <= 1) stop("Observed time series is needed")
+    if (length(prd) <= 1) stop("Predicted time series is needed")
     condition <- match.arg(condition, choices = c("GT", "GE", "LT", "LE"))
     ineq <- switch(condition,
                    "GT" = ">",
