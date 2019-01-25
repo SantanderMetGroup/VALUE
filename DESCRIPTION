@@ -14,7 +14,7 @@ Suggests:
 Type: Package
 Title: Climate data validation in the framework of the COST action VALUE
 Version: 2.0.0
-Date: 2019-01-15
+Date: 2019-01-25
 Authors@R: as.person(c(
     "Santander Meteorology Group [aut]",      
     "Predictia Intelligent Data Solutions [ctb]",
@@ -33,7 +33,7 @@ Authors@R: as.person(c(
     "Max Tuni <max@predictia.es> [ctb]",
     "Martin Widmann <M.Widmann@bham.ac.uk> [ctb]"))
 BugReports: https://github.com/SantanderMetGroup/R_VALUE/issues
-Description: Indices and diagnostics to perform climate data validation implemented in the COST action VALUE. See the reference paper <https://doi.org/10.1002/joc.5462>.
+Description: Indices and measures to perform climate data validation in the Framework of the COST Action VALUE. See the reference paper <https://doi.org/10.1002/joc.5462>.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true

@@ -3,6 +3,8 @@
 Package VALUE is the continuation of the former package [R.VALUE](https://github.com/SantanderMetGroup/R_VALUE). See its history in <https://github.com/SantanderMetGroup/R_VALUE/releases>
 
 ## v2.0.0
+ * `loadValueStations` has been deprecated, and will be eventually removed in future pakage versions. The user is now referred to `loadStationData` from package `loadeR`
+ * New atomic function `valueIndex1D`, for index calculation on time series vectors
  * New functions `show.indices` and `show.diagnostics`, providing a list of available indices/diagnostics 
 
 

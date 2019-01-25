@@ -15,10 +15,10 @@ Gutiérrez, J.M., Maraun, D., Widmann, M. _et al._, 2018. An intercomparison of 
 A direct method for installing the most recent stable release requires the package `devtools`. Within R, just type:
 
 ```r
-devtools::install_github("SantanderMetGroup/R_VALUE")
+devtools::install_github("SantanderMetGroup/VALUE")
 ```
 
-Alternatively, you can download the sources from the [releases tab](https://github.com/SantanderMetGroup/R_VALUE/releases)
+Alternatively, you can download the sources from the [releases tab](https://github.com/SantanderMetGroup/VALUE/releases)
 
 Once installed, for a quick overview:
 
