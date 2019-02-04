@@ -1,10 +1,29 @@
+#     validation1D. Atomic functions calling the VALUE validation routines
+#     
+#     Copyright (C) 2019 Santander Meteorology Group (http://www.meteo.unican.es)
+#
+#     This program is free software: you can redistribute it and/or modify
+#     it under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+# 
+#     This program is distributed in the hope that it will be useful,
+#     but WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#     GNU General Public License for more details.
+# 
+#     You should have received a copy of the GNU General Public License
+#     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
 #' @title VALUE index calculation
 #' @description Atomic function to compute VALUE indices from a time series 
 #' @template templateIndexParams
 #' @param dates A character (or \code{POSIXct}) vector following the format \dQuote{YYYY-MM-DD}
 #'  (i.e., \code{format = "\%Y-\%m-\%d"} as in \code{\link{strptime}}). Note that the dates are not required 
 #'  by all indices, so the default is \code{NULL}. The function will yield an error if dates are required but not supplied.
-#' @param indices A character vector of index codes to be computed.
+#' @param index.codes A character vector of index codes to be computed.
 #' @return A named list of output indices
 #' @author J. Bedia
 #' @export
@@ -34,7 +53,8 @@ valueIndex1D <- function(ts, dates = NULL, index.codes) {
 #' @export
 #' @examples 
 #' data(tmin.det)
-#' # Some indices, like correlation, are computed upon the raw time series (i.e. no previous index is computed)
+#' # Some indices, like correlation, are computed upon the raw time series
+#' # (i.e. no previous index is computed)
 #' valueMeasure1D(indexObs = NULL,
 #'                indexPrd = NULL,
 #'                obs = tmin.det$obs,
@@ -86,13 +106,10 @@ valueMeasure1D <- function(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = N
 #' @param arg.list A list of arguments in the form key=value
 #' @param code Character string indicating the code of the target index or measure
 #' @param dates Optional dates vector (depends of the selected index/measure)
-#' @return A list with two items:
-#' \itemize {
-#'   \item \code{fun}: Name of the validation function
-#'   \item \code{arg.list}: A complete list of arguments in the form key=value
-#' }
+#' @return A list with two items: \code{fun}, containing the name of the validation function and \code{arg.list}, a complete list of arguments in the form key=value.
 #' @keywords internal
 #' @details The function is internally used by \code{\link{valueIndex1D}} and \code{\link{valueMeasure1D}}
+#' @importFrom magrittr %>% 
 #' @author J Bedia
    
 parseArgumentString <- function(arg.list, code, dates) {

@@ -10,7 +10,7 @@ subsetVALUE(valueObj, stationID = NULL, members = NULL,
 }
 \arguments{
 \item{valueObj}{The input object to be subset. This is either an observation, as returned by \code{loadValueStations}, 
-, or a predictions object as returned by \code{loadValuePredictions}.}
+, or a predictions object as returned by \code{loadStationPredictions}.}
 
 \item{stationID}{Character string. Station codes.}
 

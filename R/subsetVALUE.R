@@ -20,7 +20,7 @@
 #' @description Creates a new predictions/observations VALUE object that is a subset of the input object 
 #' along the selected dimensions
 #' @param valueObj The input object to be subset. This is either an observation, as returned by \code{loadValueStations}, 
-#' , or a predictions object as returned by \code{loadValuePredictions}.
+#' , or a predictions object as returned by \code{loadStationPredictions}.
 #' @param stationID Character string. Station codes.
 #' @param members An integer vector indicating \strong{the position} of the members to be subset. Default to NULL.
 #' @param season An integer vector indicating the months to be subset. 

@@ -1,6 +1,6 @@
-#     loadValuePredictions.R Load a user-defined spatio-temporal slice from a VALUE predictions dataset
+#     loadStationPredictions.R Load a user-defined spatio-temporal slice from a VALUE predictions dataset
 #     
-#     Copyright (C) 2015 Santander Meteorology Group (http://www.meteo.unican.es)
+#     Copyright (C) 2019 Santander Meteorology Group (http://www.meteo.unican.es)
 #
 #     This program is free software: you can redistribute it and/or modify
 #     it under the terms of the GNU General Public License as published by
@@ -39,6 +39,7 @@
 #' @importFrom stats na.omit
 #' @importFrom abind abind
 #' @importFrom transformeR getSeason getYearsAsINDEX     
+#' @importFrom loadeR string2date getTimeDomainStations timeBoundsValue
 #' @family loading
 #'@examples  \dontrun{
 #' #Example predictions
@@ -54,10 +55,10 @@
 #' pred.file2 <- file.path(find.package("VALUE"),
 #'                         "example_datasets",
 #'                         "example_predictions_tmin_portal_exp1a_stochastic.zip")
-#' pred2 <- loadValuePredictions(obs, pred.file2)
+#' pred2 <- loadStationPredictions(obs, pred.file2)
 #' str(pred2$Data) # 3D array with 'member' dimension
 #' # Selecting the first 2 members using 'n.mem':
-#' pred3 <- loadValuePredictions(obs, pred.file2, n.mem=2)
+#' pred3 <- loadStationPredictions(obs, pred.file2, n.mem=2)
 #' str(pred3$Data) # 3D array with 'member' dimension of length 2
 #' }
 
@@ -102,9 +103,9 @@ loadStationPredictions <- function(stationObj, predictions.file, tz = "", na.str
             }
         }      
         timeString <- read.csv(unz(dataset, zipFileContents[1]), colClasses = "character")[ , 1]
-        timeDates <- loadeR:::string2date(timeString, tz) ############
+        timeDates <- loadeR::string2date(timeString, tz) ############
         timeString <- NULL
-        timePars <- loadeR:::getTimeDomainStations(timeDates, season, years) #################
+        timePars <- loadeR::getTimeDomainStations(timeDates, season, years) #################
         # timePars <- getTimeDomainValueStations(timeDates, season, years)
         if (length(intersect(timePars$timeDates, as.POSIXlt(stationObj$Dates$start))) == 0) {
             stop("Temporal mismatch between predictions and observations")
@@ -125,9 +126,9 @@ loadStationPredictions <- function(stationObj, predictions.file, tz = "", na.str
     } else {# txt file      
         n.members = 1
         timeString <- read.csv(dataset, colClasses = "character")[ , 1]      
-        timeDates <- loadeR:::string2date(timeString, tz) #################
+        timeDates <- loadeR::string2date(timeString, tz) #################
         timeString <- NULL
-        timePars <- loadeR:::getTimeDomainStations(timeDates, season, years)
+        timePars <- loadeR::getTimeDomainStations(timeDates, season, years)
         if (length(intersect(timePars$timeDates, as.POSIXlt(stationObj$Dates$start))) == 0) {
             stop("Temporal mismatch between predictions and observations")
         }
@@ -150,7 +151,7 @@ loadStationPredictions <- function(stationObj, predictions.file, tz = "", na.str
     stationObj$Data <- aux
     aux <- NULL
     gc()
-    stationObj$Dates <- loadeR:::timeBoundsValue(timePars$timeDates, tz)
+    stationObj$Dates <- loadeR::timeBoundsValue(timePars$timeDates, tz)
     ind.st <- na.omit(match(header[-1], stationObj$Metadata$station_id))
     stationObj$xyCoords <- stationObj$xyCoords[ind.st, ]
     stationObj$Metadata <- sapply(names(stationObj$Metadata), function(x) stationObj$Metadata[[x]][ind.st],

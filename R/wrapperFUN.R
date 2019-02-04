@@ -34,8 +34,8 @@
 #' @param measure.fun A character vector with the name of the R function that computes the measure.
 #' @param index.args A list with additional arguments passed to \code{index.fun}. It contains a key-value list for each additional argument.
 #' @param measure.args Same as \code{index.args} but for the measure function.
-#' @param o R object containing the observations as returned by \code{\link{loadValueStations}}. 
-#' @param p R object containing the predictions as returned by \code{\link{loadValuePredictions}}.
+#' @param o R object containing the observations as returned by \code{\link[loadeR]{loadStationData}}. 
+#' @param p R object containing the predictions as returned by \code{\link{loadStationPredictions}}.
 #' @param processes processes
 #' @param processNames Labels identifying the processes
 #' @param na.prop Maximum allowable proportion of missing data. Default to 0.9
@@ -54,7 +54,7 @@
 #'                       pattern = "example_predictions_tmin_portal_exp1a_deterministic",
 #'                       full.names = TRUE)
 #' # Load predictions
-#' p <- loadValuePredictions(o, predictions.file = prdfile)
+#' p <- loadStationPredictions(o, predictions.file = prdfile)
 #' # Example: computing correlation. Seasonal cycle removal is applied
 #' vno <- wrapperFUN(metric = c('measure'),
 #'                   names = c('measure'),
@@ -311,8 +311,8 @@ subsetData <- function(obj, startDates, endDates, stations){
 #' @author J. Bedia
 
 dimFix <- function(valueObj) {
-    # Add fake 'station' dimension to single-station datasets
-    if (!("station" %in% attr(valueObj$Data, "dimensions"))) {
+    # Add fake 'loc' dimension to single-station datasets
+    if (!("loc" %in% attr(valueObj$Data, "dimensions"))) {
         dimNames <- c(attr(valueObj$Data, "dimensions"), "station")
         perm <- if (length(attr(valueObj$Data, "dimensions")) == 2) { # "member","time"
             c(2,3,1)

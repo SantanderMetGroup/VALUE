@@ -18,8 +18,8 @@
 #
 #' @title Mutual Information Matrix
 #' @description Computes the mutual information between stations regarding different aspects of precipitation
-#' @param stationObj An R-VALUE object containing station data (as returned by \code{\link{loadValueStations}}).
-#' @param predictionObj A R-VALUE predictions object as loaded by \code{\link{loadValuePredictions}}.
+#' @param stationObj An R-VALUE object containing station data (as returned by \code{\link[loadeR]{loadStationData}}).
+#' @param predictionObj A R-VALUE predictions object as loaded by \code{\link{loadStationPredictions}}.
 #'  Default to NULL, meaning that the matrix of joint probabilities is done on the observations.
 #' @param season Character string indicating the target season. Accepted values are 
 #' \code{c("annual", "DJF", "MAM", "JJA", "SON")}

@@ -94,7 +94,7 @@ VALUE's standard ASCII format reference:
 \url{http://stackoverflow.com/questions/12460938/r-reading-in-a-zip-data-file-without-unzipping-it}
 }
 \seealso{
-Other loading: \code{\link{loadValuePredictions}}
+Other loading: \code{\link{loadStationPredictions}}
 }
 \author{
 J. Bedia

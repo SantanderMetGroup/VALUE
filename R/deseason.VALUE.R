@@ -18,7 +18,7 @@
 #
 #' @title Remove seasonal cycle
 #' @description Remove seasonal cycle from a VALUE dataset (possibly using a moving average filter for daily datasets)
-#' @param valueObj Any VALUE object (as returned either by \code{\link{loadValueStations}} or \code{\link{loadValuePredictions}}).
+#' @param valueObj Any VALUE object (as returned either by \code{\link{loadValueStations}} or \code{\link{loadStationPredictions}}).
 #' @param window.width Integer number indicating the width, in days, of the window used for
 #'  moving average computation of the reference daily climatology. Default to 31 days. See details.
 #' @param max.na.prop Maximum allowed proportion of missing data (Default to 0.25). See details

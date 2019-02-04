@@ -36,9 +36,9 @@ independently of whether this aggregation is performed before or after.}
 
 \item{measure.args}{Same as \code{index.args} but for the measure function.}
 
-\item{o}{R object containing the observations as returned by \code{\link{loadValueStations}}.}
+\item{o}{R object containing the observations as returned by \code{\link[loadeR]{loadStationData}}.}
 
-\item{p}{R object containing the predictions as returned by \code{\link{loadValuePredictions}}.}
+\item{p}{R object containing the predictions as returned by \code{\link{loadStationPredictions}}.}
 
 \item{processes}{processes}
 
@@ -68,7 +68,7 @@ prdfile <- list.files(file.path(find.package("VALUE"), "example_datasets"),
                       pattern = "example_predictions_tmin_portal_exp1a_deterministic",
                       full.names = TRUE)
 # Load predictions
-p <- loadValuePredictions(o, predictions.file = prdfile)
+p <- loadStationPredictions(o, predictions.file = prdfile)
 # Example: computing correlation. Seasonal cycle removal is applied
 vno <- wrapperFUN(metric = c('measure'),
                   names = c('measure'),

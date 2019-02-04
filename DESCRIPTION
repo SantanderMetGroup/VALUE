@@ -8,13 +8,15 @@ Imports:
     RcppEigen,
     RCurl,
     signal,
+    transformeR,
+    loadeR(>= 1.4.10),
     magrittr
 Suggests:
     lattice
 Type: Package
 Title: Climate data validation in the framework of the COST action VALUE
 Version: 2.0.0
-Date: 2019-01-25
+Date: 2019-02-04
 Authors@R: as.person(c(
     "Santander Meteorology Group [aut]",      
     "Predictia Intelligent Data Solutions [ctb]",

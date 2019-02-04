@@ -9,9 +9,9 @@ miMat.VALUE(stationObj, predictionObj = NULL, season = c("annual",
   prob = NULL, threshold = 1, max.na.prop = 0.25)
 }
 \arguments{
-\item{stationObj}{An R-VALUE object containing station data (as returned by \code{\link{loadValueStations}}).}
+\item{stationObj}{An R-VALUE object containing station data (as returned by \code{\link[loadeR]{loadStationData}}).}
 
-\item{predictionObj}{A R-VALUE predictions object as loaded by \code{\link{loadValuePredictions}}.
+\item{predictionObj}{A R-VALUE predictions object as loaded by \code{\link{loadStationPredictions}}.
 Default to NULL, meaning that the matrix of joint probabilities is done on the observations.}
 
 \item{season}{Character string indicating the target season. Accepted values are 
