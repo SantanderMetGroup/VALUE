@@ -9,9 +9,3 @@ Package VALUE is the continuation of the former package [R.VALUE](https://github
    * `valueIndex1D`, for index calculation
    * `valueMeasure1D`, for measure calculation 
  * New internal example datasets: `tmin.det`
-
-
-
-
-
-
