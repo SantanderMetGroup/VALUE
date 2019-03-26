@@ -2,7 +2,7 @@
 .Rhistory
 .RData
 R_VALUE.Rproj
-ignore
+ignore*
 .Rbuildignore
 .Rprofile
 *~
