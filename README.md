@@ -29,3 +29,9 @@ library(VALUE)
 help(package="VALUE")
 ```
 
+### User support
+
+For creating tickets please refer to these [posting guidelines](https://github.com/SantanderMetGroup/climate4R#user-support)
+
+
+
