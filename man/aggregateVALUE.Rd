@@ -22,8 +22,8 @@ Aggregates a grid along the target dimensions through aggregation function speci
 Currently only the temporal monthly aggregation is implemented
 }
 \examples{
-
-obs.file <- file.path(find.package("R.VALUE"),
+\dontrun{
+obs.file <- file.path(find.package("VALUE"),
                       "example_datasets",
                       "VALUE_ECA_86_v2.zip")
 tmin.DJF.daily <- loadValueStations(obs.file, "tmin",
@@ -33,6 +33,7 @@ tmin.DJF.monthlyMean <- aggregateVALUE(tmin.DJF.daily, aggr.m = list(FUN = "mean
 # Other functions can be introduced by the user. E.g., monthly median:
 tmin.DJF.monthlyMedian <- aggregateVALUE(tmin.DJF.daily,
                                        aggr.m = list(FUN = "quantile", probs = .5, na.rm = TRUE))
+                                       }
 }
 \author{
 J. Bedia

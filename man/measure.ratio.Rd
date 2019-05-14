@@ -4,8 +4,8 @@
 \alias{measure.ratio}
 \title{Ratio}
 \usage{
-measure.ratio(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL,
-  dates)
+measure.ratio(indexObs = NULL, indexPrd = NULL, obs = NULL,
+  prd = NULL, dates)
 }
 \arguments{
 \item{indexObs}{index computed from the observations}
@@ -26,5 +26,5 @@ Function to compute the ratio between the predicted and observed means.
 The measure depends on the index mean.
 }
 \author{
-J. Bedia, D. San-Mart\'in, S. Herrera
+J. Bedia, D. San-Martín, S. Herrera
 }

@@ -70,7 +70,7 @@ must take care of variable units and eventual conversions when necessary.
 
 \examples{
 \dontrun{
-obs.dataset <- file.path(find.package("R.VALUE"), "example_datasets", "VALUE_ECA_86_v2.zip")
+obs.dataset <- file.path(find.package("VALUE"), "example_datasets", "VALUE_ECA_86_v2.zip")
 # All data
 obs <- loadValueStations(dataset = obs.dataset, var = "tmean")
 # Selection by lon-lat
@@ -94,8 +94,9 @@ VALUE's standard ASCII format reference:
 \url{http://stackoverflow.com/questions/12460938/r-reading-in-a-zip-data-file-without-unzipping-it}
 }
 \seealso{
-Other loading: \code{\link{loadValuePredictions}}
+Other loading: \code{\link{loadStationPredictions}}
 }
 \author{
 J. Bedia
 }
+\concept{loading}

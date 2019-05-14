@@ -12,10 +12,10 @@ na.filter.VALUE(valueObj, max.na.prop = 0)
 \item{max.na.prop}{Maximum allowed proportion of missing data (Default to 0, i.e., no missing values are allowed)}
 }
 \value{
-A R.VALUE object without the stations above the user-defined threshold of missing data
+A VALUE object without the stations above the user-defined threshold of missing data
 }
 \description{
-Remove stations over a user-defined proportion of missing data from a R.VALUE multi-station object,
+Remove stations over a user-defined proportion of missing data from a VALUE multi-station object,
 }
 \details{
 The function assumes that all dimensions are present (i.e., function dimFix has been applied)

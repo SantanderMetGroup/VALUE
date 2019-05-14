@@ -3,7 +3,9 @@
 #' @template templateIndexParams
 #' @param lowVarPeriod Low frequency threshold. Minimum cycles per unit time below which frequency is considered as low
 #' @param INDEX A Vector defining the aggregation periods (passed to \code{tapply}). No aggregation is performed by default.
-#' @author Douglas Maraun \email{dmaraun@@geomar.de}
+#' @author Douglas Maraun
+#' @importFrom stats spec.pgram na.exclude
+#' @keywords internal
 #' @export
 
 index.lfvar <- function(ts, lowVarPeriod = 30, INDEX = 1:length(ts)) {

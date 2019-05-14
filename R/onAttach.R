@@ -2,7 +2,7 @@
 #' @importFrom RCurl getURL
 
 .onAttach <- function(...) {
-      pkgname <- "R.VALUE"
+      pkgname <- "VALUE"
       lib <- system.file(package = pkgname)
       ver <- packageDescription(pkgname)$Version
       builddate <- packageDescription(pkgname)$Date

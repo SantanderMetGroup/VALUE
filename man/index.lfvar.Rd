@@ -17,5 +17,6 @@ index.lfvar(ts, lowVarPeriod = 30, INDEX = 1:length(ts))
 Annual and seasonal proportion of variance in low frequency
 }
 \author{
-Douglas Maraun \email{dmaraun@geomar.de}
+Douglas Maraun
 }
+\keyword{internal}

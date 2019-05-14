@@ -21,5 +21,6 @@ A float number corresponding to the quantile.
 Function to compute the sample quantiles for the given probabilities.
 }
 \author{
-Neyko Neykov \email{neyko.neykov@meteo.bg}, J. Bedia, D. San-Mart\'in, S. Herrera
+Neyko Neykov, J. Bedia, D. San-Martín, S. Herrera
 }
+\keyword{internal}

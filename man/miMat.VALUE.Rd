@@ -4,14 +4,14 @@
 \alias{miMat.VALUE}
 \title{Mutual Information Matrix}
 \usage{
-miMat.VALUE(stationObj, predictionObj = NULL, season = c("annual", "DJF",
-  "MAM", "JJA", "SON"), aggr.type = c("after", "before"), prob = NULL,
-  threshold = 1, max.na.prop = 0.25)
+miMat.VALUE(stationObj, predictionObj = NULL, season = c("annual",
+  "DJF", "MAM", "JJA", "SON"), aggr.type = c("after", "before"),
+  prob = NULL, threshold = 1, max.na.prop = 0.25)
 }
 \arguments{
-\item{stationObj}{An R-VALUE object containing station data (as returned by \code{\link{loadValueStations}}).}
+\item{stationObj}{An R-VALUE object containing station data (as returned by \code{\link[loadeR]{loadStationData}}).}
 
-\item{predictionObj}{A R-VALUE predictions object as loaded by \code{\link{loadValuePredictions}}.
+\item{predictionObj}{A R-VALUE predictions object as loaded by \code{\link{loadStationPredictions}}.
 Default to NULL, meaning that the matrix of joint probabilities is done on the observations.}
 
 \item{season}{Character string indicating the target season. Accepted values are 
@@ -57,7 +57,7 @@ Note that when the joint probability is zero the returned value of MI is NaN.
 }
 \examples{
 \dontrun{
-obs.file <- file.path(find.package("R.VALUE"), "example_datasets", "VALUE_53_ECAD_Germany_v1.zip")
+obs.file <- file.path(find.package("VALUE"), "example_datasets", "VALUE_53_ECAD_Germany_v1.zip")
 stationObj <- loadValueStations(obs.file, var = "precip")
 # Mutual information (By default, computes the
 # joint probabilities for each pair of stations for Dry-Dry, Dry-Wet,

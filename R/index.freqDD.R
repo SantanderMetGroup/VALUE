@@ -1,6 +1,6 @@
 #' @title Dry-dry probability
 #' @description Function to compute the dry-dry probability index. 
-#' @author Neyko Neykov \email{neyko.neykov@@meteo.bg}, J. Bedia, D. San-Mart\'in, S. Herrera
+#' @author Neyko Neykov, J. Bedia, D. San-Martín, S. Herrera
 #' @param ts A vector containing the data
 #' @param threshold A float number defining the threshold considered. Default to 1.
 #' @return A float number corresponding to the dry-dry transition probability.

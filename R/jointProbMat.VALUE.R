@@ -18,8 +18,8 @@
 #
 #' @title Joint probability analysis
 #' @description Computes different joint (precipitation) probabilities between stations 
-#' @param stationObj An R-VALUE object containing station data (as returned by \code{\link{loadValueStations}}).
-#' @param predictionObj A R-VALUE predictions object as loaded by \code{\link{loadValuePredictions}}.
+#' @param stationObj An R-VALUE object containing station data (as returned by \code{\link[loadeR]{loadStationData}}).
+#' @param predictionObj A R-VALUE predictions object as loaded by \code{\link{loadStationPredictions}}.
 #'  Default to NULL, meaning that the matrix of joint probabilities is done on the observations.
 #' @param season Character string indicating the target season. Accepted values are 
 #' \code{c("annual", "DJF", "MAM", "JJA", "SON")}
@@ -59,17 +59,17 @@
 #' @export
 #' @references \url{https://en.wikipedia.org/wiki/Mutual_information}
 #' @examples \dontrun{
-#' obs.file <- file.path(find.package("R.VALUE"), "example_datasets", "VALUE_53_ECAD_Germany_v1.zip")
+#' obs.file <- file.path(find.package("VALUE"), "example_datasets", "VALUE_53_ECAD_Germany_v1.zip")
 #' stationObj <- loadValueStations(obs.file, var = "precip")
 #' # Wet-wet probability (precip >= 1mm)
 #' ww <- jointProbMat.VALUE(stationObj,
-#'                         predictionObj = NULL,
-#'                         season = "annual",
-#'                         threshold = 1,
-#'                         max.na.prop = 1,
-#'                         aggr.type = "after",
-#'                         prob.type = "WW",
-#'                         output = "MI")
+#'                          predictionObj = NULL,
+#'                          season = "annual",
+#'                          threshold = 1,
+#'                          max.na.prop = 1,
+#'                          aggr.type = "after",
+#'                          prob.type = "WW",
+#'                          output = "MI")
 #'
 #' # Dry-dry joint probability (precip < 1mm)
 #' dd <- jointProbMat.VALUE(stationObj,

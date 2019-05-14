@@ -8,7 +8,7 @@ deseason.VALUE(valueObj, window.width = 31, max.na.prop = 0.25,
   monthly = FALSE, monthly.clim.fun = "mean", ...)
 }
 \arguments{
-\item{valueObj}{Any VALUE object (as returned either by \code{\link{loadValueStations}} or \code{\link{loadValuePredictions}}).}
+\item{valueObj}{Any VALUE object (as returned either by \code{\link{loadValueStations}} or \code{\link{loadStationPredictions}}).}
 
 \item{window.width}{Integer number indicating the width, in days, of the window used for
 moving average computation of the reference daily climatology. Default to 31 days. See details.}
@@ -46,7 +46,7 @@ the annual series, rather than in particular seasons. Seasonal slices can be sel
 }
 \examples{
 \dontrun{
-obs.file <- file.path(find.package("R.VALUE"),"example_datasets","VALUE_ECA_86_v2.zip")
+obs.file <- file.path(find.package("VALUE"),"example_datasets","VALUE_ECA_86_v2.zip")
 # Load 1 station (Innsbruck) as example:
 stationObj <- loadValueStations(obs.file, var = "tmin", stationID = "000013", years = 1991:1993)
 # Test different window sizes:

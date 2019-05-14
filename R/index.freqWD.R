@@ -1,6 +1,6 @@
 #' @title Wet-dry probability
 #' @description Function to compute the wet-dry probability index. 
-#' @author Neyko Neykov \email{neyko.neykov@@meteo.bg}, J. Bedia, D. San-Mart\'in, S. Herrera
+#' @author Neyko Neykov, J. Bedia, D. San-Martín, S. Herrera
 #' @param ts A vector containing the data
 #' @param threshold A float number defining the threshold considered.
 #' @return A float number corresponding to the wet-dry transition probability.

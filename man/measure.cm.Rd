@@ -7,8 +7,9 @@
 L. Sachs and J. Hedderich (2006). Angewandte Statistik. Springer.
 }
 \usage{
-measure.cm(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL,
-  dates, Nbins = 100, what = c("CvM", "pval", "KSdiff"), threshold = NULL)
+measure.cm(indexObs = NULL, indexPrd = NULL, obs = NULL,
+  prd = NULL, dates, Nbins = 100, what = c("CvM", "pval", "KSdiff"),
+  threshold = NULL)
 }
 \arguments{
 \item{indexObs}{index computed from the observations}
@@ -37,5 +38,5 @@ A floating number with the measure indicated in \code{what} argument.
 Function to compare the observed and predicted distribution using the Cramer von Misses index.
 }
 \author{
-Ole Roessler \email{ole.roessler@giub.unibe.ch}, J. Bedia, D. San-Mart\'in, S. Herrera
+Ole Roessler, J. Bedia, D. San-Martín, S. Herrera
 }

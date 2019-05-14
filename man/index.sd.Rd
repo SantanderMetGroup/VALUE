@@ -16,5 +16,6 @@ A float number corresponding to the standard deviation of the input sample.
 Function to compute the (quasi) standard deviation index.
 }
 \author{
-Ole Roessler \email{ole.roessler@giub.unibe.ch}, J. Bedia, D. San-Mart\'in, S. Herrera
+Ole Roessler, J. Bedia, D. San-Martín, S. Herrera
 }
+\keyword{internal}

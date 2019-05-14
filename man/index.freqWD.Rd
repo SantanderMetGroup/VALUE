@@ -18,5 +18,5 @@ A float number corresponding to the wet-dry transition probability.
 Function to compute the wet-dry probability index.
 }
 \author{
-Neyko Neykov \email{neyko.neykov@meteo.bg}, J. Bedia, D. San-Mart\'in, S. Herrera
+Neyko Neykov, J. Bedia, D. San-Martín, S. Herrera
 }

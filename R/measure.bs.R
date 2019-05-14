@@ -15,19 +15,15 @@
 measure.bs <- function(indexObs = NULL, indexPrd = NULL, obs, prd, dates,
                        threshold = 0,
                        condition) {
-      if (length(obs) <= 1) {
-            stop("Observed time series is needed")
-      }
-      if (length(prd) <= 1) {
-            stop("Predicted time series is needed")
-      }
-      condition <- match.arg(condition, choices = c("GT", "GE", "LT", "LE"))
-      ineq <- switch(condition,
-                     "GT" = ">",
-                     "GE" = ">=",
-                     "LT" = "<",
-                     "LE" = "<=")
-      obs.bin <- eval(parse(text = paste("as.integer(obs", ineq, "threshold)")))
-      prd.bin <- eval(parse(text = paste("as.integer(prd", ineq, "threshold)")))
-      sum((prd.bin - obs.bin) ^ 2) / length(obs)
+    if (length(obs) <= 1) stop("Observed time series is needed")
+    if (length(prd) <= 1) stop("Predicted time series is needed")
+    condition <- match.arg(condition, choices = c("GT", "GE", "LT", "LE"))
+    ineq <- switch(condition,
+                   "GT" = ">",
+                   "GE" = ">=",
+                   "LT" = "<",
+                   "LE" = "<=")
+    obs.bin <- eval(parse(text = paste("as.integer(obs", ineq, "threshold)")))
+    prd.bin <- eval(parse(text = paste("as.integer(prd", ineq, "threshold)")))
+    sum((prd.bin - obs.bin) ^ 2) / length(obs)
 }

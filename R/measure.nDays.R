@@ -7,5 +7,5 @@
 #' @export
 
 measure.nDays <- function(indexObs = NULL, indexPrd = NULL, obs, prd, dates) {
-      length(obs)
+    length(obs)
 }

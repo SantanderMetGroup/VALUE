@@ -18,7 +18,7 @@
 #
 #' @title Remove seasonal cycle
 #' @description Remove seasonal cycle from a VALUE dataset (possibly using a moving average filter for daily datasets)
-#' @param valueObj Any VALUE object (as returned either by \code{\link{loadValueStations}} or \code{\link{loadValuePredictions}}).
+#' @param valueObj Any VALUE object (as returned either by \code{\link{loadValueStations}} or \code{\link{loadStationPredictions}}).
 #' @param window.width Integer number indicating the width, in days, of the window used for
 #'  moving average computation of the reference daily climatology. Default to 31 days. See details.
 #' @param max.na.prop Maximum allowed proportion of missing data (Default to 0.25). See details
@@ -41,7 +41,7 @@
 #' @author J. Bedia 
 #' @export
 #' @examples \dontrun{
-#' obs.file <- file.path(find.package("R.VALUE"),"example_datasets","VALUE_ECA_86_v2.zip")
+#' obs.file <- file.path(find.package("VALUE"),"example_datasets","VALUE_ECA_86_v2.zip")
 #' # Load 1 station (Innsbruck) as example:
 #' stationObj <- loadValueStations(obs.file, var = "tmin", stationID = "000013", years = 1991:1993)
 #' # Test different window sizes:
