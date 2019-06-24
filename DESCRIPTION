@@ -3,6 +3,7 @@ Depends:
     R(>= 3.5.0)
 Imports:
     utils,
+    verification,
     abind,
     evd,
     RcppEigen,

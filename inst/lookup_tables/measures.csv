@@ -4,6 +4,7 @@ ts.cmpval;measure.cm('what' = 'pval');Cramer von Mises Index p-value
 ts.cmksdiff;measure.cm('what' = 'KSdiff');Maximum absolute difference between the distributions
 ts.rp;measure.cor('method' = 'pearson');Pearson correlation
 ts.rs;measure.cor('method' = 'spearman');Spearman correlation
+ts.rocss;measure.rocss();Roc Skill Score (ROCSS)
 ts.MAE;measure.mae();Mean Absolute Error
 ts.RMSE;measure.rmse();Root Mean Square Error
 bias;measure.bias();Pred-Obs
