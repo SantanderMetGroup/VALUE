@@ -16,11 +16,12 @@ Suggests:
     lattice
 Type: Package
 Title: Climate data validation in the framework of the COST action VALUE
-Version: 2.0.0
-Date: 2019-02-04
+Version: 2.1.0
+Date: 2019-07-12
 Authors@R: as.person(c(
     "Santander Meteorology Group [aut]",      
     "Predictia Intelligent Data Solutions [ctb]",
+    "Jorge B. Medina <bmedina@ifca.unican.es> [ctb]",
     "Joaquín Bedia <bediaj@unican.es> [ctb, cre]",
     "Thomas Bosshard <thomas.bosshard@smhi.se> [ctb]",
     "María J. Casado <mcasadoc@aemet.es> [ctb]",
@@ -37,6 +38,7 @@ Authors@R: as.person(c(
     "Martin Widmann <M.Widmann@bham.ac.uk> [ctb]"))
 BugReports: https://github.com/SantanderMetGroup/R_VALUE/issues
 Description: Indices and measures to perform climate data validation in the Framework of the COST Action VALUE. See the reference paper <https://doi.org/10.1002/joc.5462>.
+URL: http://www.value-cost.eu/
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
