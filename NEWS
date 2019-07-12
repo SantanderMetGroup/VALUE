@@ -3,13 +3,16 @@
 Package VALUE is the continuation of the former package [R.VALUE](https://github.com/SantanderMetGroup/R_VALUE). See the full history in <https://github.com/SantanderMetGroup/R_VALUE/releases>
 
 ## v2.0.0 (10 May 2019)
- * `loadValueStations` has been deprecated, and will be eventually removed in future pakage versions. The user is now referred to `loadStationData` from package `loadeR`
+ * `loadValueStations` has been deprecated, and will be eventually removed in future package versions. The user is now referred to `loadStationData` from package `loadeR`
  * New functions `show.indices` and `show.measures`, providing a list of available indices/measures 
  * New atomic functions for validation:
    * `valueIndex1D`, for index calculation
    * `valueMeasure1D`, for measure calculation 
- * New internal example datasets: `tmin.det`
+ * New internal example datasets: `tmin.det` 
 
 ## v2.1.0 (12 Jul 2019)
  * Add new measure: ROC Skill Score
  * Other minor documentation updates
+
+## v2.1.1 (12 Jul 2019)
+ * Added PRUDENCE region metadata to VALUE-ECA-86 dataset
