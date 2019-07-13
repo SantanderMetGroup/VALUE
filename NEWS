@@ -14,5 +14,5 @@ Package VALUE is the continuation of the former package [R.VALUE](https://github
  * Add new measure: ROC Skill Score
  * Other minor documentation updates
 
-## v2.1.1 (12 Jul 2019)
+## v2.1.1 (13 Jul 2019)
  * Added PRUDENCE region metadata to VALUE-ECA-86 dataset
