@@ -6,7 +6,9 @@
       lib <- system.file(package = pkgname)
       ver <- packageDescription(pkgname)$Version
       builddate <- packageDescription(pkgname)$Date
-      mess <- paste(pkgname, " version ", ver, " (", builddate,") is loaded", sep = "")
+      mess <- paste0("---------------------------------------------- \n",
+                     "| ", pkgname, " version ", ver, " (", builddate,
+                     ") is loaded |\n|         http://www.value-cost.eu           |\n----------------------------------------------")
       packageStartupMessage(mess)
       repoName <- gsub("\\.", "\\_", pkgname)
       url <- paste0("https://raw.githubusercontent.com/SantanderMetGroup/", repoName, "/master/DESCRIPTION")
