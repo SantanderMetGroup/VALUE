@@ -16,8 +16,8 @@ Suggests:
     lattice
 Type: Package
 Title: Climate data validation in the framework of the COST action VALUE
-Version: 2.1.1
-Date: 2019-07-13
+Version: 2.2.0
+Date: 2019-12-06
 Authors@R: as.person(c(
     "Santander Meteorology Group [aut]",      
     "Predictia Intelligent Data Solutions [ctb]",

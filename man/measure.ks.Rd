@@ -4,7 +4,7 @@
 \alias{measure.ks}
 \title{Two-sided KS score}
 \usage{
-measure.ks(indexObs = NULL, indexPrd = NULL, obs, prd)
+measure.ks(indexObs = NULL, indexPrd = NULL, obs, prd, dates = NULL)
 }
 \arguments{
 \item{indexObs}{index computed from the observations}
@@ -14,6 +14,8 @@ measure.ks(indexObs = NULL, indexPrd = NULL, obs, prd)
 \item{obs}{A vector of observations}
 
 \item{prd}{A vector of predictions}
+
+\item{dates}{Ignored. Introduced for compatibility with the rest of measures}
 }
 \value{
 A float number corresponding to the KS score.
