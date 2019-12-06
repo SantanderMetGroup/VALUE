@@ -23,5 +23,6 @@ ts.cmIndexWet;measure.cm('what' = 'CvM', 'threshold' = 1);Cramer von Mises Index
 biasCirc;measure.bias.circ();Function to compute the bias considering circular series
 ts.rpY;measure.cor('aggregation' = 'annual', 'dates' = TRUE, 'method' = 'pearson');Pearson correlation computed on the yearly-averaged series
 ts.ks;measure.ks();Two-sided KS score
+ts.ks.pval;measure.ks.pval('corrected' = TRUE);P-values of the two-sided KS score
 ts.rp1Y;measure.corlongterm('detrend' = TRUE, 'timescale' = 1, 'dates' = TRUE, 'method' = 'pearson');Pearson correlation computed in the filtered series (one year)
 ts.rp7Y;measure.corlongterm('detrend' = FALSE, 'timescale' = 7, 'dates' = TRUE, 'method' = 'pearson');Pearson correlation computed in the filtered series (seven year)
