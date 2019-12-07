@@ -1,0 +1,159 @@
+\documentclass[11pt]{amsart}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{Brief Article}
+\author{The Author}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+
+
+\begin{table}[!htb]
+\caption{\label{t.indices} Diagnostic indices used in this work. Codes refer to the package \url{https://github.com/SantanderMetGroup/VALUE}. The columns `P' and `T' indicate whether the indices are suitable for validating precipitation and temperatures, respectively. Description provides a brief description of the index. The columns `M', `T' and `E' indicate if the indices analyze marginal \protect\cite{Gutierrez_et_al_VALUE_2019}, temporal \protect\cite{Maraun_et_al_VALUE_2019} or extreme \protect\cite{Hertig_et_al_VALUE_2019} aspects, respectively. Highlighted in boldface those used in the synthesis VALUE paper \protect\cite{VALUE_Synthesis_2019}. Several standard indices defined in \protect\cite{ETCCDI_1999} have been also included in the table. Note that the spell has been defined as at least two consecutive days fulfilling a particular condition. 
+%The filtering version of the index works with the approximation of the corresponding time series as linear combination of trigonometric functions (sin and cos).
+}
+\centering
+{\tiny \begin{tabular}{lllllll}
+\hline
+  \textbf{Code}  & \textbf{P}& \textbf{T}& \textbf{Description}  & \textbf{M} & \textbf{T} & \textbf{E} \\
+\hline
+\textbf{Mean}               & $\times$  & $\times$  & Mean value                                                                & $\times$ & &   \\
+\textbf{Var}                & $\times$  & $\times$  & Quasi-variance                                                            & $\times$ & &   \\
+\textbf{Skewness}           & $\times$  & $\times$  & Skewness (third moment)					     & $\times$ & &   \\
+P02                         &           & $\times$  & 2nd percentile of daily values                                            & & & $\times$   \\
+P98                         & $\times$  & $\times$  & 98th percentile of daily values                       		            & & & $\times$   \\
+P98WetAmount                & $\times$  &           & Total amount above 98th percentile of wet days ($\ge 1\, mm$)    & & & $\times$   \\
+\textbf{RV20\_min}           &           & $\times$  & 20-years return value (min values, left tail)                    & & & $\times$   \\
+\textbf{RV20\_max}           & $\times$  & $\times$  & 20-years return value (max values, right tail)          & & & $\times$   \\
+\textbf{AC1}                & $\times$  & $\times$  & Lag-1 autocorrelation                                                     & &  $\times$  & \\
+AC2                         & $\times$  & $\times$  & Lag-2 autocorrelation                                                     & &  $\times$  & \\
+\textbf{AC3}                & $\times$  & $\times$  & Lag-3 autocorrelation                                                     & & &   \\  
+\textbf{R01}                & $\times$  &           & Relative frequency of wet days ($\ge 1\, mm$)                      & $\times$ & &   \\
+\textbf{SDII}               & $\times$  &           & Mean value of wet days ($\ge 1\, mm$)  (Simple Day Intensity Index)          & $\times$ & &   \\
+R10p                        & $\times$  &           & Precipitation amount falling in days with precip >= 10mm                  & & &            \\
+R10                         & $\times$  &           & Relative frequency of days with precip >= 10mm                            & & & $\times$   \\
+R20p                        & $\times$  &           & Precipitation amount falling in days with precip >= 20mm                  & & &            \\
+R20                         & $\times$  &           & Relative frequency of days with precip >= 20mm                            & & &            \\
+\textbf{WWProb}             & $\times$  &           & Wet-wet ($\ge 1\, mm$) transition probability                                 & &  $\times$  & \\
+\textbf{DWProb}             & $\times$  &           & Dry-wet ($\ge 1\, mm$)  transition probability                              & &  $\times$  & \\
+P98Wet                      & $\times$  &           & 98th percentile of wet ($\ge 1\, mm$) days                                      & & & $\times$   \\
+R95pTOT  			        & $\times$  &           & Mean of the annual precipitation sum in days over P95   &      \\  
+FB0                         &           & $\times$  & Relative frequency of days $< 0$ (\underline{Ice days} for Tmax; \underline{Frost days} for Tmin)   & & & $\times$  \\
+FB15                        &           & $\times$  & Relative frequency of days $< 15$                                           & & &    \\
+FA30                        &           & $\times$  & Relative frequency of days $> 30$                                           & & & $\times$ \\
+FA25                        &           & $\times$  & Relative frequency of days $> 25$ (\underline{Summer days} for Tmax)                    & & & $\times$ \\
+FA20                        &           & $\times$  & Relative frequency of days $> 20$ (\underline{Tropical nights} for Tmin)                & & & $\times$  \\
+WetSpellMean                & $\times$  &           & Mean of wet ($\ge 1\, mm$) spell length distribution                             & &  $\times$  &  \\ 	
+DrySpellMean                & $\times$  &           & Mean of dry ($< 1\, mm$) spell length distribution                              & &  $\times$  &  \\
+WetSpellP50                 & $\times$  &           & Median of wet (($\ge 1\, mm$)   ) spell length distribution                           & & &    \\
+DrySpellP50                 & $\times$  &           & Median of dry ($< 1\, mm$) spell length distribution  	        				& & &    \\
+WetSpellP90                 & $\times$  &           & 90th percentile of wet ($\ge 1\, mm$)  spell length distribution         		& & &    \\
+DrySpellP90                 & $\times$  &           & 90th percentile of dry ($< 1\, mm$)  spell length distribution             		& & &    \\
+\textbf{WetAnnualMaxSpell}  & $\times$  &           & Median of the annual wet ($\ge 1\, mm$) spell maxima                  			& & & $\times$  \\
+\textbf{DryAnnualMaxSpell}  & $\times$  &           & Median of the annual dry ($< 1\, mm$) spell maxima                    			& & & $\times$  \\
+WarmSpellP50                &           & $\times$  & Median of the warm ($> P90$) spell length distribution          & & &    \\
+WarmSpellP90                &           & $\times$  & 90th percentile of the annual warm ($> P90$) spell maxima       & & &   \\
+\textbf{WarmAnnualMaxSpell} &           & $\times$  & Median of the annual warm ($> P90$) spell maxima                & & & $\times$  \\
+ColdSpellP50                &           & $\times$  & Median of the cold ($< P10$) spell length distribution          & & &    \\
+ColdSpellP90                &           & $\times$  & 90th percentile of the cold ($< P10$) spell length distribution & & &    \\
+ColdAnnualMaxSpell          &           & $\times$  & Median of the annual cold ($< P10$) spell maxima                & & & $\times$ \\
+ColdSpellMean               &           & $\times$  & Mean of the cold ($< P10$) spell length distribution            & &  $\times$  & \\
+WarmSpellMean               &           & $\times$  & Mean of the warm ($> P90$) spell length distribution            & &  $\times$  &  \\
+AnnualCycleMin              & $\times$  & $\times$  & Minimum of the daily annual cycle                                         & & &    \\
+AnnualCycleMax              & $\times$  & $\times$  & Maximum of the daily annual cycle                                         & & &    \\
+\textbf{AnnualCycleAmp}     & $\times$  & $\times$  & Amplitude of the daily annual cycle                                       & &  $\times$  &  \\
+\textbf{AnnualCycleRelAmp}  & $\times$  & $\times$  & Relative amplitude of the daily annual cycle (\%, relative to the mean)   & &  $\times$  &  \\
+%AnnualCycleAmp\_filtered    & $\times$  & $\times$  & Amplitude of the daily annual cycle after filtering                       & & &    \\
+%AnnualCycleRelAmp\_filtered & $\times$  & $\times$  & Relative amplitude of the daily annual cycle (\%) after filtering         & & &    \\
+\textbf{AnnualCyclePhase}   & $\times$  & $\times$  & Maximum of the daily annual cycle including a phase                       & &  $\times$  &  \\
+%AnnualCycleAsymmetry        & $\times$  & $\times$  & Difference in days between maximum and minimum of the filtered cycle      &  \\  
+ProVarLowFreq365            & $\times$  & $\times$  & Proportion of variance in low frequency (annual)                          & & &    \\
+ProVarLowFreq30             & $\times$  & $\times$  & Proportion of variance in low frequency (monthly)                         & & &    \\
+VarM                        & $\times$  & $\times$  & Monthly variability                                                       & & &    \\
+\textbf{VarY}               & $\times$  & $\times$  & Interannual variability                                                   & &  $\times$  &  \\
+Trend                       & $\times$  & $\times$  & Linear trend of the interannual time series.                              & &  $\times$  &  \\
+TrendSig                    & $\times$  & $\times$  & Significance (0.05 level) of the trend (binary, 1=significant)            & & &    \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+%------------------------------------------------------------------------
+%@article{VALUE_Synthesis_2019,
+%author = {Maraun, Douglas and Widmann, Martin and Guti\'errez, Jos\'e M.},
+%title = {Statistical downscaling skill under present climate conditions: A synthesis of the VALUE perfect predictor experiment},
+%journal = {International Journal of Climatology},
+%volume = {39},
+%number = {9},
+%pages = {3692-3703},
+%doi = {10.1002/joc.5877},
+%url = {https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/joc.5877},
+%year = {2019}
+%}
+%
+%@article{Hertig_et_al_VALUE_2019,
+%author = {Hertig, Elke and Maraun, Douglas and Bartholy, Judit and Pongracz, Rita and Vrac, Mathieu and Mares, Ileana and Guti\'errez, Jos\'e M. and Wibig, Joanna and Casanueva, Ana and Soares, Pedro M. M.},
+%title = {Comparison of statistical downscaling methods with respect to extreme events over Europe: Validation results from the perfect predictor experiment of the COST Action VALUE},
+%journal = {International Journal of Climatology},
+%volume = {39},
+%number = {9},
+%pages = {3846-3867},
+%doi = {10.1002/joc.5469},
+%url = {https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/joc.5469},
+%year = {2019}
+%}
+%
+%@article{Maraun_et_al_VALUE_2019,
+%author = {Maraun, Douglas and Huth, Radan and Guti\'errez, Jos\'e M. and Mart\'i­n, Daniel San and Dubrovsky, Martin and Fischer, Andreas and Hertig, Elke and Soares, Pedro M. M. and Bartholy, Judit and Pongr\'acz, Rita and Widmann, Martin and Casado, Maria J. and Ramos, Petra and Bedia, Joaqu\'i­n},
+%title = {The VALUE perfect predictor experiment: Evaluation of temporal variability},
+%journal = {International Journal of Climatology},
+%volume = {39},
+%number = {9},
+%pages = {3786-3818},
+%doi = {10.1002/joc.5222},
+%url = {https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/joc.5222},
+%year = {2019}
+%}
+%
+%@article{Gutierrez_et_al_VALUE_2019,
+%author = {Guti\'errez, J. M. and Maraun, D. and Widmann, M. and Huth, R. and Hertig, E. and Benestad, R. and Roessler, O. and Wibig, J. and Wilcke, R. and Kotlarski, S. and San Mart\'i­n, D. and Herrera, S. and Bedia, J. and Casanueva, A. and Manzanas, R. and Iturbide, M. and Vrac, M. and Dubrovsky, M. and Ribalaygua, J. and P\'ortoles, J. and R\'i¤ty, O. and R\'i¤is\'i¤nen, J. and Hingray, B. and Raynaud, D. and Casado, M. J. and Ramos, P. and Zerenner, T. and Turco, M. and Bosshard, T. and Å tÄ›p\'i¡nek, P. and Bartholy, J. and Pongracz, R. and Keller, D. E. and Fischer, A. M. and Cardoso, R. M. and Soares, P. M. M. and Czernecki, B. and Pag\'e, C.},
+%title = {An intercomparison of a large ensemble of statistical downscaling methods over Europe: Results from the VALUE perfect predictor cross-validation experiment},
+%journal = {International Journal of Climatology},
+%volume = {39},
+%number = {9},
+%pages = {3750-3785},
+%doi = {10.1002/joc.5462},
+%url = {https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/joc.5462},
+%year = {2019}
+%}
+%
+%@article{Widmann_et_al_VALUE_2019,
+%author = {Widmann, Martin and Bedia, Joaquin and Guti\'errez, Jos\'e M. and Bosshard, Thomas and Hertig, Elke and Maraun, Douglas and Casado, Mar\'i­a J. and Ramos, Petra and Cardoso, Rita M. and Soares, Pedro M. M. and Ribalaygua, Jamie and Pag\'e, Christian and Fischer, Andreas M. and Herrera, Sixto and Huth, Radan},
+%title = {Validation of spatial variability in downscaling results from the VALUE perfect predictor experiment},
+%journal = {International Journal of Climatology},
+%volume = {39},
+%number = {9},
+%pages = {3819-3845},
+%doi = {10.1002/joc.6024},
+%url = {https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/joc.6024},
+%year = {2019}
+%}
+%
+%@book{ETCCDI_1999,
+%  title =	 "{Weather and Climate Extremes: CLIVAR/GCOS/WMO Workshop on Indices and Indicators for Climate Extremes Workshop Summary}",
+%  author =	 "T. R. Karl and N. Nicholls and A. Ghazi",
+%  editor =	 "T. R. Karl and N. Nicholls and A. Ghazi",
+%  publisher = "Springer",
+%  address =	 "Dordrecht",
+%  year =	 1999
+%}
+
+\end{document}  
