@@ -24,6 +24,7 @@ Authors@R: as.person(c(
     "Jorge B. Medina <bmedina@ifca.unican.es> [ctb]",
     "Joaquín Bedia <bediaj@unican.es> [ctb, cre]",
     "Thomas Bosshard <thomas.bosshard@smhi.se> [ctb]",
+    "Swen Brands <swen.brands@gmail.com> [ctb]",
     "María J. Casado <mcasadoc@aemet.es> [ctb]",
     "José M. Gutiérrez <gutierjm@unican.es> [ctb]",
     "Sixto Herrera <sixto@predictia.es> [ctb]",
