@@ -10,7 +10,7 @@
 
 index.wetAmount.prcXXth <- function(ts, prob = .98) {
       wetdays <- ts[ts > 1]
-      q <- quantile(wetdays, prob = prob)
+      q <- quantile(wetdays, prob = prob, na.rm=TRUE)
       sum(wetdays[wetdays >= q])      
 }
 
