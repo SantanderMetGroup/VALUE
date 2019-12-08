@@ -16,9 +16,10 @@ Package VALUE is the continuation of the former package [R.VALUE](https://github
 
 ## v2.1.1 (13 Jul 2019)
  * Added PRUDENCE region metadata to VALUE-ECA-86 dataset
-
-## v2.2.0 (06 Dic 2019)
  * New `measure.rocss` function for ROC skill score calculation of probabilistic predictions
- * New `measure.ks.pval` returning (corrected) p-values for the ks score. Package checks yield a warning due to the internal call to `stats:::C_pSmirnov2x`, not part of the API. 
+
+## v2.2.0 (08 Dic 2019)
+ * New `measure.ks.pval` returning (corrected) p-values for the ks score. Package checks yield a warning due to the internal call to `stats:::C_pSmirnov2x`, not part of the R API. 
  * Introduce dates argument in measure.ks for compatibility with `climate4R.VALUE::valueMeasure` calls
+ * Add internal latex index table in inst/latex
  * Other minor changes and documentation updates
