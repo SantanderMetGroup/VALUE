@@ -3,12 +3,11 @@
 #' points/stations.
 #' @author M.N. Legasa
 #' @param tsl A list of vectors (one for each gridpoint/station) containing the data
-#' @param type Correlation type: \code{"pearson"}, \code{"kendall"} or \code{"spearman"}
+#' @param type Correlation type: \code{"pearson"} or \code{"spearman"}
 #' @param use Check \code{?cor}. \code{"pairwise.complete.obs"} (default) ignores
 #'  uses all available info for each column pair.
 #' @importFrom stats cor
 #' @return A matrix number corresponding to the proportion/number of days below/above the defined threshold.
-
 
 index.spatial.cor <- function(tsl, type = "pearson", use = "pairwise.complete.obs"){
   

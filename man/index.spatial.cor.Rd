@@ -9,7 +9,7 @@ index.spatial.cor(tsl, type = "pearson", use = "pairwise.complete.obs")
 \arguments{
 \item{tsl}{A list of vectors (one for each gridpoint/station) containing the data}
 
-\item{type}{Correlation type: \code{"pearson"}, \code{"kendall"} or \code{"spearman"}}
+\item{type}{Correlation type: \code{"pearson"} or \code{"spearman"}}
 
 \item{use}{Check \code{?cor}. \code{"pairwise.complete.obs"} (default) ignores
 uses all available info for each column pair.}

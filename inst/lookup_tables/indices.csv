@@ -58,3 +58,9 @@ AnnualCyclePhasePeak1_filtered;index.annual.cycle.filtered('peak' = 1, 'dates' =
 AnnualCyclePhasePeak2_filtered;index.annual.cycle.filtered('peak' = '2', 'dates' = TRUE, 'type' = 'phase'); ;F
 SpatialCorPearson;index.spatial.cor('type' = 'pearson');Spatial pairwise Pearson correlation;T
 SpatialCorSpearman;index.spatial.cor('type' = 'spearman');Spatial pairwise Spearman correlation;T
+LaggedCrossCorPearson1;index.spatial.laggedCrosCor('dates' = TRUE, 'lag' = 1, 'type' = "pearson");Lag-1 spatial Pearson Cross-correlations;T
+LaggedCrossCorPearson2;index.spatial.laggedCrosCor('dates' = TRUE, 'lag' = 2, 'type' = "pearson");Lag-2 spatial Pearson Cross-correlations;T
+LaggedCrossCorPearson3;index.spatial.laggedCrosCor('dates' = TRUE, 'lag' = 3, 'type' = "pearson");Lag-3 spatial Pearson Cross-correlations;T
+LaggedCrossCorSpearman1;index.spatial.laggedCrosCor('dates' = TRUE, 'lag' = 1, 'type' = "spearman");Lag-1 spatial Spearman Cross-correlations;T
+LaggedCrossCorSpearman2;index.spatial.laggedCrosCor('dates' = TRUE, 'lag' = 2, 'type' = "spearman");Lag-2 spatial Spearman Cross-correlations;T
+LaggedCrossCorSpearman3;index.spatial.laggedCrosCor('dates' = TRUE, 'lag' = 3, 'type' = "spearman");Lag-3 spatial Spearman Cross-correlations;T

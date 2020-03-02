@@ -38,8 +38,17 @@ valueIndex2D <- function(tsl, index.code, dates = NULL,
                          parallel = FALSE, max.ncores = 16, ncores = NULL){
   arg.list <- list()
   arg.list[["tsl"]] <- tsl
-  fun.list <- parseArgumentString(arg.list, code = index.code, dates = dates)
-  # parallel args?
+  fun.list <- parseArgumentString(arg.list, 
+                                  code = index.code,
+                                  dates = dates)
+  
+  if ("parallel" %in% 
+      formalArgs(eval(parse(text = paste0("VALUE:::", fun.list$fun))))){
+    fun.list$arg.list[["parallel"]] <- parallel
+    fun.list$arg.list[["max.ncores"]] <- max.ncores
+    fun.list$arg.list[["ncores"]] <- ncores
+  }
+  
   out <- do.call(fun.list$fun, fun.list$arg.list)
   return(out)
 }
