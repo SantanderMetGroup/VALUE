@@ -23,3 +23,7 @@ Package VALUE is the continuation of the former package [R.VALUE](https://github
  * Introduce dates argument in measure.ks for compatibility with `climate4R.VALUE::valueMeasure` calls
  * Add internal latex index table in inst/latex
  * Other minor changes and documentation updates
+ * New internal example datasets: `tmin.det`
+
+## v2.2.1 (23 Mar 2020)
+ * New index 'sd' -- standard deviation
