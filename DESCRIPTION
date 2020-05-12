@@ -11,7 +11,8 @@ Imports:
     signal,
     transformeR,
     loadeR(>= 1.4.10),
-    magrittr
+    magrittr,
+    pbapply
 Suggests:
     lattice
 Type: Package
