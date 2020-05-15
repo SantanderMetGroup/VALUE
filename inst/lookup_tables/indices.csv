@@ -1,6 +1,7 @@
 CODE;FUNCTION CALL;DESCRIPTION;SPATIAL
 Mean;index.mean();Mean;F
 Var;index.var();Quasi-variance;F
+sd;index.sd();Quasi-standard deviation;F
 Skewness;index.skew();Skewness;F
 R01;index.freq('freq.type' = 'rel', 'condition' = 'GE', 'threshold' = 1);Relative frequency of wet days (precip >= 1mm);F
 R10p;index.amountFreqGE('threshold' = 10);Precipitation amount falling in days with precip >= 10mm;F
