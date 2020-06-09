@@ -21,7 +21,11 @@ index.freq <- function(ts, threshold = 1, condition, freq.type) {
                "LE" = "<=")
       len <- 1
       if (freq.type == "rel") len <- length(ts)
-      eval(parse(text = paste("sum(ts", ineq, "threshold, na.rm = TRUE) / len")))
+      if (all(is.na(ts))) {
+         NA
+      } else {
+         eval(parse(text = paste("sum(ts", ineq, "threshold, na.rm = TRUE) / len")))
+      }
 }      
 
 
