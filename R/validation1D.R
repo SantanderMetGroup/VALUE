@@ -37,7 +37,6 @@ valueIndex1D <- function(ts, dates = NULL, index.codes, ...) {
         arg.list <- list(...)
         arg.list[["ts"]] <- ts
         fun.list <- parseArgumentString(arg.list, code = index.codes[i], dates = dates)
-        print(str(fun.list))
         do.call(fun.list$fun, fun.list$arg.list)
     })
     names(out.list) <- index.codes
