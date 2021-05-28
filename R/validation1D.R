@@ -130,7 +130,6 @@ parseArgumentString <- function(arg.list, code, dates) {
             if (aux[2] == "FALSE") aux.val <- FALSE
             if (!is.na(suppressWarnings(as.numeric(aux[2])))) aux.val <- as.numeric(aux[2])
             if(is.null(arg.list[[aux[1]]])) arg.list[[aux[1]]] <- aux.val
-            print(arg.list[[aux[1]]])
         }
     }
     if (isTRUE(arg.list[["dates"]])) {
