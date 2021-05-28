@@ -32,9 +32,9 @@
 #' valueIndex1D(tmin.det$obs, dates = tmin.det$dates,
 #'              index.codes = c("AC1", "AC2", "FA25", "FA30", "FB15", "AnnualCycleAmp"))
 
-valueIndex1D <- function(ts, dates = NULL, index.codes) {
+valueIndex1D <- function(ts, dates = NULL, index.codes, ...) {
     out.list <- vapply(1:length(index.codes), FUN.VALUE = numeric(1), FUN = function(i) {
-        arg.list <- list()
+        arg.list <- list(...)
         arg.list[["ts"]] <- ts
         fun.list <- parseArgumentString(arg.list, code = index.codes[i], dates = dates)
         do.call(fun.list$fun, fun.list$arg.list)
