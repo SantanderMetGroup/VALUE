@@ -37,6 +37,7 @@ valueIndex1D <- function(ts, dates = NULL, index.codes, ...) {
         arg.list <- list(...)
         arg.list[["ts"]] <- ts
         fun.list <- parseArgumentString(arg.list, code = index.codes[i], dates = dates)
+        print(str(fun.list))
         do.call(fun.list$fun, fun.list$arg.list)
     })
     names(out.list) <- index.codes
@@ -129,7 +130,8 @@ parseArgumentString <- function(arg.list, code, dates) {
             if (aux[2] == "TRUE") aux.val <- TRUE
             if (aux[2] == "FALSE") aux.val <- FALSE
             if (!is.na(suppressWarnings(as.numeric(aux[2])))) aux.val <- as.numeric(aux[2])
-            arg.list[[aux[1]]] <- aux.val
+            if(is.null(arg.list[[aux[1]]])) arg.list[[aux[1]]] <- aux.val
+            print(arg.list[[aux[1]]])
         }
     }
     if (isTRUE(arg.list[["dates"]])) {
