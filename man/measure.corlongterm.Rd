@@ -4,9 +4,18 @@
 \alias{measure.corlongterm}
 \title{Correlation on Long time scales}
 \usage{
-measure.corlongterm(indexObs = NULL, indexPrd = NULL, obs, prd, dates,
-  method = c("pearson", "kendall", "spearman"), t.aggr = "annual",
-  timescale = 1, detrend = FALSE, plot = FALSE)
+measure.corlongterm(
+  indexObs = NULL,
+  indexPrd = NULL,
+  obs,
+  prd,
+  dates,
+  method = c("pearson", "kendall", "spearman"),
+  t.aggr = "annual",
+  timescale = 1,
+  detrend = FALSE,
+  plot = FALSE
+)
 }
 \arguments{
 \item{indexObs}{index computed from the observations}

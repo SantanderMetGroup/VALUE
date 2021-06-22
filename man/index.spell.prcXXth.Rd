@@ -4,8 +4,15 @@
 \alias{index.spell.prcXXth}
 \title{Spell length percentiles}
 \usage{
-index.spell.prcXXth(ts, dates, threshold = 1, threshold.type = "abs",
-  condition = c("GT", "GE", "LT", "LE"), prob = 0.5)
+index.spell.prcXXth(
+  ts,
+  dates,
+  threshold = 1,
+  threshold.type = "abs",
+  condition = c("GT", "GE", "LT", "LE"),
+  prob = 0.5,
+  min.spell.length = NULL
+)
 }
 \arguments{
 \item{ts}{A vector containing the data}
@@ -25,6 +32,9 @@ Two possible values: \code{"abs"} and \code{"prob"} respectively. Default to \co
 
 \item{prob}{A float number in the range [0,1] defining the probability of the quantile to be calculated.
 Default to median (\code{prob = 0.5}).}
+
+\item{min.spell.length}{integer value (in the time units of the input data, usually days).
+Removes all spells equal or lower than this number prior to percentile calculation. See details.}
 }
 \value{
 A float number with the corresponding percentile.
@@ -35,6 +45,9 @@ Computes a user-defined percentile for the duration of spells (above/below) a gi
 \details{
 The function requires the date information in order to ensure that spells
  are computed on consecutive records.
+ 
+ In case a \code{min.spell.length} is indicated, note that the function will (silently) ignore 
+ it if no spells of such duration are found in the input time series.
 }
 \author{
 N. Neykov, S. Herrera, J. Bedia

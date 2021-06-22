@@ -4,8 +4,12 @@
 \alias{index.annual.cycle}
 \title{Annual cycle statistics}
 \usage{
-index.annual.cycle(ts, dates, type = c("phase", "min", "max", "amp",
-  "relamp", "asymmetry"), window.width = 61)
+index.annual.cycle(
+  ts,
+  dates,
+  type = c("phase", "min", "max", "amp", "relamp", "asymmetry"),
+  window.width = 61
+)
 }
 \arguments{
 \item{ts}{A vector containing the data}

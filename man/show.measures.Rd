@@ -4,8 +4,7 @@
 \alias{show.measures}
 \title{Display a summary table of VALUE measures}
 \usage{
-show.measures(measure.code = NULL, function.name = NULL,
-  filter = NULL)
+show.measures(measure.code = NULL, function.name = NULL, filter = NULL)
 }
 \arguments{
 \item{measure.code}{String. measure code}

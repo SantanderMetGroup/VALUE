@@ -4,8 +4,13 @@
 \alias{loadStationPredictions}
 \title{Load VALUE predictions data}
 \usage{
-loadStationPredictions(stationObj, predictions.file, tz = "",
-  na.strings = "NA", n.mem = NULL)
+loadStationPredictions(
+  stationObj,
+  predictions.file,
+  tz = "",
+  na.strings = "NA",
+  n.mem = NULL
+)
 }
 \arguments{
 \item{stationObj}{A station data object returned by \code{\link{loadValueStations}}. See details.}
@@ -60,6 +65,7 @@ str(pred3$Data) # 3D array with 'member' dimension of length 2
 }
 }
 \seealso{
-Other loading: \code{\link{loadValueStations}}
+Other loading: 
+\code{\link{loadValueStations}()}
 }
 \concept{loading}

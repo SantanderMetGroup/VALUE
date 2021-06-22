@@ -4,8 +4,7 @@
 \alias{index.annual.cycle.filtered}
 \title{Filtered annual cycle maxima statistics}
 \usage{
-index.annual.cycle.filtered(ts, dates, type = "phase", peak = 1,
-  thresh = 0.1)
+index.annual.cycle.filtered(ts, dates, type = "phase", peak = 1, thresh = 0.1)
 }
 \arguments{
 \item{ts}{A vector containing the data}
