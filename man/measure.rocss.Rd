@@ -4,8 +4,7 @@
 \alias{measure.rocss}
 \title{Roc Skill Score (ROCSS)}
 \usage{
-measure.rocss(indexObs = NULL, indexPrd = NULL, obs = NULL,
-  prd = NULL, dates)
+measure.rocss(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL, dates)
 }
 \arguments{
 \item{indexObs}{index computed from the observations}

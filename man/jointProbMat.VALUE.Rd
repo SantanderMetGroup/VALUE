@@ -4,11 +4,17 @@
 \alias{jointProbMat.VALUE}
 \title{Joint probability analysis}
 \usage{
-jointProbMat.VALUE(stationObj, predictionObj = NULL,
+jointProbMat.VALUE(
+  stationObj,
+  predictionObj = NULL,
   season = c("annual", "DJF", "MAM", "JJA", "SON"),
-  aggr.type = c("after", "before"), prob.type = c("DD", "DW", "WW",
-  "WD"), prob = NULL, output = c("MI", "jointProb"), threshold = 1,
-  max.na.prop = 0.25)
+  aggr.type = c("after", "before"),
+  prob.type = c("DD", "DW", "WW", "WD"),
+  prob = NULL,
+  output = c("MI", "jointProb"),
+  threshold = 1,
+  max.na.prop = 0.25
+)
 }
 \arguments{
 \item{stationObj}{An R-VALUE object containing station data (as returned by \code{\link[loadeR]{loadStationData}}).}

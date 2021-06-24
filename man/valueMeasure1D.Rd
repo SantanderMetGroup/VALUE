@@ -4,8 +4,14 @@
 \alias{valueMeasure1D}
 \title{VALUE measure calculation}
 \usage{
-valueMeasure1D(indexObs = NULL, indexPrd = NULL, obs = NULL,
-  prd = NULL, dates = NULL, measure.codes)
+valueMeasure1D(
+  indexObs = NULL,
+  indexPrd = NULL,
+  obs = NULL,
+  prd = NULL,
+  dates = NULL,
+  measure.codes
+)
 }
 \arguments{
 \item{indexObs}{index computed from the observations}

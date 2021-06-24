@@ -27,3 +27,6 @@ Package VALUE is the continuation of the former package [R.VALUE](https://github
 
 ## v2.2.1 (23 Mar 2020)
  * New index 'sd' -- standard deviation
+
+## v2.3.0 (22 Jun 2021)
+ * Option min.spell.length in `index.spell.prcXXth`, in order to discard all spells below a predefined length prior to quantile calculation.

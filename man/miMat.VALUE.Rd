@@ -4,9 +4,15 @@
 \alias{miMat.VALUE}
 \title{Mutual Information Matrix}
 \usage{
-miMat.VALUE(stationObj, predictionObj = NULL, season = c("annual",
-  "DJF", "MAM", "JJA", "SON"), aggr.type = c("after", "before"),
-  prob = NULL, threshold = 1, max.na.prop = 0.25)
+miMat.VALUE(
+  stationObj,
+  predictionObj = NULL,
+  season = c("annual", "DJF", "MAM", "JJA", "SON"),
+  aggr.type = c("after", "before"),
+  prob = NULL,
+  threshold = 1,
+  max.na.prop = 0.25
+)
 }
 \arguments{
 \item{stationObj}{An R-VALUE object containing station data (as returned by \code{\link[loadeR]{loadStationData}}).}

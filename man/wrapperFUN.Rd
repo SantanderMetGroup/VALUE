@@ -4,12 +4,22 @@
 \alias{wrapperFUN}
 \title{Wrapper function to launch the validation}
 \usage{
-wrapperFUN(metric = c("obs", "pred", "measure"), names = NULL,
+wrapperFUN(
+  metric = c("obs", "pred", "measure"),
+  names = NULL,
   season = c("annual", "DJF", "MAM", "JJA", "SON"),
-  member.aggregation = "none", n.mem = NULL, index.fun = NULL,
-  measure.fun = NULL, index.args = NULL, measure.args = NULL,
-  o = o, p = p, processes = data.frame(), processNames = c(),
-  na.prop = 1)
+  member.aggregation = "none",
+  n.mem = NULL,
+  index.fun = NULL,
+  measure.fun = NULL,
+  index.args = NULL,
+  measure.args = NULL,
+  o = o,
+  p = p,
+  processes = data.frame(),
+  processNames = c(),
+  na.prop = 1
+)
 }
 \arguments{
 \item{metric}{Character vector.}

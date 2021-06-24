@@ -4,9 +4,14 @@
 \alias{index.spellmax.annual.prcXXth}
 \title{Annual spell length percentiles}
 \usage{
-index.spellmax.annual.prcXXth(ts, dates, threshold = 1,
-  threshold.type = "abs", condition = c("GT", "GE", "LT", "LE"),
-  prob = 0.5)
+index.spellmax.annual.prcXXth(
+  ts,
+  dates,
+  threshold = 1,
+  threshold.type = "abs",
+  condition = c("GT", "GE", "LT", "LE"),
+  prob = 0.5
+)
 }
 \arguments{
 \item{ts}{A vector containing the data}

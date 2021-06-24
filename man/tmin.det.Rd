@@ -4,12 +4,14 @@
 \name{tmin.det}
 \alias{tmin.det}
 \title{Observations and deterministic predictions of daily (minimum) temperature}
-\format{A data frame with 8036 rows (days) and 3 variables:
+\format{
+A data frame with 8036 rows (days) and 3 variables:
 \describe{
   \item{dates}{Record date, in POSIXct}
   \item{obs}{Observed records}
   \item{pred}{Predicted records. See details}
-}}
+}
+}
 \source{
 The VALUE Validation Portal: \url{http://www.value-cost.eu/validationportal}
 }
