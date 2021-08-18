@@ -4,8 +4,13 @@
 \alias{index.spell.mean}
 \title{Spell length mean}
 \usage{
-index.spell.mean(ts, dates, threshold = 1, threshold.type = "abs",
-  condition = c("GT", "GE", "LT", "LE"))
+index.spell.mean(
+  ts,
+  dates,
+  threshold = 1,
+  threshold.type = "abs",
+  condition = c("GT", "GE", "LT", "LE")
+)
 }
 \arguments{
 \item{ts}{A vector containing the data}

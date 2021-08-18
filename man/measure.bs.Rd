@@ -4,8 +4,15 @@
 \alias{measure.bs}
 \title{Brier score}
 \usage{
-measure.bs(indexObs = NULL, indexPrd = NULL, obs, prd, dates,
-  threshold = 0, condition)
+measure.bs(
+  indexObs = NULL,
+  indexPrd = NULL,
+  obs,
+  prd,
+  dates,
+  threshold = 0,
+  condition
+)
 }
 \arguments{
 \item{indexObs}{index computed from the observations}

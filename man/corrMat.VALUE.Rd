@@ -4,9 +4,16 @@
 \alias{corrMat.VALUE}
 \title{Correlation matrix for paper Figures 4 and 5 on spatial validation}
 \usage{
-corrMat.VALUE(stationObj, predictionObj = NULL, season = c("annual",
-  "DJF", "MAM", "JJA", "SON"), method = "pearson", type = "after",
-  max.na.prop = 0.25, deseason = TRUE, window.width = 31)
+corrMat.VALUE(
+  stationObj,
+  predictionObj = NULL,
+  season = c("annual", "DJF", "MAM", "JJA", "SON"),
+  method = "pearson",
+  type = "after",
+  max.na.prop = 0.25,
+  deseason = TRUE,
+  window.width = 31
+)
 }
 \arguments{
 \item{stationObj}{An R-VALUE object containing station data (as returned by \code{\link[loadeR]{loadStationData}}).}

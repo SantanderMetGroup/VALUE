@@ -4,9 +4,16 @@
 \alias{subsetVALUE}
 \title{Select an arbitrary subset from a VALUE object along one or more of its dimensions}
 \usage{
-subsetVALUE(valueObj, stationID = NULL, members = NULL,
-  season = NULL, dates = NULL, years = NULL, lonLim = NULL,
-  latLim = NULL)
+subsetVALUE(
+  valueObj,
+  stationID = NULL,
+  members = NULL,
+  season = NULL,
+  dates = NULL,
+  years = NULL,
+  lonLim = NULL,
+  latLim = NULL
+)
 }
 \arguments{
 \item{valueObj}{The input object to be subset. This is either an observation, as returned by \code{loadValueStations}, 

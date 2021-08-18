@@ -4,8 +4,14 @@
 \alias{measure.ks.pval}
 \title{Compute p-value of the two sample Kolmogorov-Smirnov test}
 \usage{
-measure.ks.pval(indexObs = NULL, indexPrd = NULL, obs, prd,
-  dates = NULL, corrected = TRUE)
+measure.ks.pval(
+  indexObs = NULL,
+  indexPrd = NULL,
+  obs,
+  prd,
+  dates = NULL,
+  corrected = TRUE
+)
 }
 \arguments{
 \item{indexObs}{index computed from the observations}

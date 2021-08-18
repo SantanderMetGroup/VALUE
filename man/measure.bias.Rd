@@ -4,8 +4,7 @@
 \alias{measure.bias}
 \title{Bias}
 \usage{
-measure.bias(indexObs = NULL, indexPrd = NULL, obs = NULL,
-  prd = NULL, dates)
+measure.bias(indexObs = NULL, indexPrd = NULL, obs = NULL, prd = NULL, dates)
 }
 \arguments{
 \item{indexObs}{index computed from the observations}

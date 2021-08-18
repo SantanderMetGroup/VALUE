@@ -4,8 +4,14 @@
 \alias{deseason.VALUE}
 \title{Remove seasonal cycle}
 \usage{
-deseason.VALUE(valueObj, window.width = 31, max.na.prop = 0.25,
-  monthly = FALSE, monthly.clim.fun = "mean", ...)
+deseason.VALUE(
+  valueObj,
+  window.width = 31,
+  max.na.prop = 0.25,
+  monthly = FALSE,
+  monthly.clim.fun = "mean",
+  ...
+)
 }
 \arguments{
 \item{valueObj}{Any VALUE object (as returned either by \code{\link{loadValueStations}} or \code{\link{loadStationPredictions}}).}

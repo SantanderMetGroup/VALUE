@@ -4,8 +4,16 @@
 \alias{loadValueStations}
 \title{Load VALUE station data}
 \usage{
-loadValueStations(dataset, var, stationID = NULL, lonLim = NULL,
-  latLim = NULL, season = NULL, years = NULL, tz = "")
+loadValueStations(
+  dataset,
+  var,
+  stationID = NULL,
+  lonLim = NULL,
+  latLim = NULL,
+  season = NULL,
+  years = NULL,
+  tz = ""
+)
 }
 \arguments{
 \item{dataset}{A character string indicating the database to be accessed. This is usually a path to a local file or a URL 
@@ -94,7 +102,8 @@ VALUE's standard ASCII format reference:
 \url{http://stackoverflow.com/questions/12460938/r-reading-in-a-zip-data-file-without-unzipping-it}
 }
 \seealso{
-Other loading: \code{\link{loadStationPredictions}}
+Other loading: 
+\code{\link{loadStationPredictions}()}
 }
 \author{
 J. Bedia

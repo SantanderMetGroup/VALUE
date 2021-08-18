@@ -4,8 +4,14 @@
 \alias{valueIndex2D}
 \title{VALUE spatial index calculation}
 \usage{
-valueIndex2D(tsl, index.code, dates = NULL, parallel = FALSE,
-  max.ncores = 16, ncores = NULL)
+valueIndex2D(
+  tsl,
+  index.code,
+  dates = NULL,
+  parallel = FALSE,
+  max.ncores = 16,
+  ncores = NULL
+)
 }
 \arguments{
 \item{tsl}{List of time series vectors.}

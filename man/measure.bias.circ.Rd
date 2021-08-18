@@ -4,8 +4,13 @@
 \alias{measure.bias.circ}
 \title{Circular bias}
 \usage{
-measure.bias.circ(indexObs = NULL, indexPrd = NULL, obs = NULL,
-  prd = NULL, dates)
+measure.bias.circ(
+  indexObs = NULL,
+  indexPrd = NULL,
+  obs = NULL,
+  prd = NULL,
+  dates
+)
 }
 \arguments{
 \item{indexObs}{index computed from the observations}

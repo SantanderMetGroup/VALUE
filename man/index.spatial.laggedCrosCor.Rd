@@ -4,9 +4,16 @@
 \alias{index.spatial.laggedCrosCor}
 \title{Lagged Spatiotemporal Cross-Correlations}
 \usage{
-index.spatial.laggedCrosCor(tsl, dates = NULL, lag = 1,
-  type = "pearson", use = "pairwise.complete.obs", parallel = FALSE,
-  max.ncores = 16, ncores = NULL)
+index.spatial.laggedCrosCor(
+  tsl,
+  dates = NULL,
+  lag = 1,
+  type = "pearson",
+  use = "pairwise.complete.obs",
+  parallel = FALSE,
+  max.ncores = 16,
+  ncores = NULL
+)
 }
 \arguments{
 \item{tsl}{A list of vectors (one for each gridpoint/station) containing the data}

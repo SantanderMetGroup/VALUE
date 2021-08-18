@@ -4,8 +4,14 @@
 \alias{index.spell.prcXXth}
 \title{Spell length percentiles}
 \usage{
-index.spell.prcXXth(ts, dates, threshold = 1, threshold.type = "abs",
-  condition = c("GT", "GE", "LT", "LE"), prob = 0.5)
+index.spell.prcXXth(
+  ts,
+  dates,
+  threshold = 1,
+  threshold.type = "abs",
+  condition = c("GT", "GE", "LT", "LE"),
+  prob = 0.5
+)
 }
 \arguments{
 \item{ts}{A vector containing the data}
