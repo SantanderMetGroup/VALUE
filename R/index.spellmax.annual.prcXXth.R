@@ -28,11 +28,12 @@ index.spellmax.annual.prcXXth <- function(ts, dates, threshold = 1, threshold.ty
             threshold <- quantile(ts, probs = threshold, type = 7, na.rm = TRUE)
       }
       yrs <- substr(dates,1,4)
-      dates <- as.Date(dates, format = "%Y-%m-%d %H:%M:%S", tz = "UTC")
+      datesi <- as.Date(dates, format = "%Y-%m-%d %H:%M:%S", tz = "UTC")
+      if(all(is.na(datesi))) datesi <- as.Date(dates, format = "%Y-%m-%d", tz = "UTC")
       uyrs <- unique(yrs)
       annual.values <- sapply(1:length(uyrs), function(x) {
             ind <- which(yrs == uyrs[x]) 
-            disc <- diff(dates[ind])
+            disc <- diff(datesi[ind])
             aux <- ts[ind]
             ind2 <- if (any(disc > 1)) {# Index of discontinuities in the data series
                   c(0, which(disc > 1))
