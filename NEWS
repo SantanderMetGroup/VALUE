@@ -27,3 +27,6 @@ Package VALUE is the continuation of the former package [R.VALUE](https://github
 
 ## v2.2.1 (23 Mar 2020)
  * New index 'sd' -- standard deviation
+ 
+## v2.2.2 (18 Aug 2021)
+ * Bugs fixed index.acf, index.freq, index.spell.prcXXth and index.spellmax.annual.prcXXth 
