@@ -9,11 +9,15 @@
 #' @export
 
 index.lfvar <- function(ts, lowVarPeriod = 30, INDEX = 1:length(ts)) {
-      mean.x <- tapply(ts, INDEX, mean, na.rm = TRUE)
-      specVar <- spec.pgram(mean.x, na.action = na.exclude, plot = FALSE)
-      lowfreqvar <- sum(specVar$spec[1/specVar$freq >= lowVarPeriod], na.rm = TRUE)
-      totalvar <- sum(specVar$spec, na.rm = TRUE)
-      lowfreqvar / totalvar
+  mean.x <- tapply(ts, INDEX, mean, na.rm = TRUE)
+  if (any(!is.na(mean.x))) {
+    specVar <- spec.pgram(mean.x, na.action = na.exclude, plot = FALSE)
+    lowfreqvar <- sum(specVar$spec[1/specVar$freq >= lowVarPeriod], na.rm = TRUE)
+    totalvar <- sum(specVar$spec, na.rm = TRUE)
+    lowfreqvar / totalvar
+  } else {
+    NA
+  }
 }
 
 
