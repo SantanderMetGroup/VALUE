@@ -30,3 +30,7 @@ Package VALUE is the continuation of the former package [R.VALUE](https://github
  
 ## v2.2.2 (18 Aug 2021)
  * Bugs fixed index.acf, index.freq, index.spell.prcXXth and index.spellmax.annual.prcXXth 
+
+## v2.2.3 (21 Jun 2023)
+ * Allow 'all NA' data in function index.lfvar
+ 
