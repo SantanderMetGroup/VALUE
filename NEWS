@@ -33,4 +33,6 @@ Package VALUE is the continuation of the former package [R.VALUE](https://github
 
 ## v2.2.3 (21 Jun 2023)
  * Allow 'all NA' data in function index.lfvar
- 
+
+## v2.2.4 (22 Jun 2023)
+ * Update of the DESCRIPTION file
